@@ -1,0 +1,11 @@
+---
+title: "prashanttiwari.github.io"
+---
+
+This is a Quarto website by Prashant Tiwari for EPPS 6354.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+```{r}
+1 + 1
+```

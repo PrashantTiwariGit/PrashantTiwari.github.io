@@ -1,0 +1,24 @@
+project:
+  type: website
+  resources:
+    - "Assignment 1.pptx"
+    - "Assignment 2.pptx"
+
+website:
+  title: "prashanttiwari.github.io"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - assignment1.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+editor: visual
