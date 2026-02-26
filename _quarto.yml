@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: .
   resources:
     - "Assignment 1.pptx"
     - "Assignment 2.pptx"
