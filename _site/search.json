@@ -7,6 +7,41 @@
     "text": "This is a Quarto website by Prashant Tiwari for EPPS 6354.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "assignment3.html",
+    "href": "assignment3.html",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Write SQL codes to get a list of:\ni. Student IDs, Instructors, and Departments\nSELECT \n    s.ID AS student_id,\n    s.name AS student_name,\n    i.name AS instructor_name,\n    s.dept_name AS department\nFROM student s\nJOIN takes t ON s.ID = t.ID\nJOIN teaches te ON t.course_id = te.course_id\n               AND t.sec_id = te.sec_id\n               AND t.semester = te.semester\n               AND t.year = te.year\nJOIN instructor i ON te.ID = i.ID\nORDER BY s.ID;"
+  },
+  {
+    "objectID": "assignment3.html#question-2",
+    "href": "assignment3.html#question-2",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Write SQL codes to get a list of:\ni. Student IDs, Instructors, and Departments\nSELECT \n    s.ID AS student_id,\n    s.name AS student_name,\n    i.name AS instructor_name,\n    s.dept_name AS department\nFROM student s\nJOIN takes t ON s.ID = t.ID\nJOIN teaches te ON t.course_id = te.course_id\n               AND t.sec_id = te.sec_id\n               AND t.semester = te.semester\n               AND t.year = te.year\nJOIN instructor i ON te.ID = i.ID\nORDER BY s.ID;"
+  },
+  {
+    "objectID": "assignment3.html#question-3",
+    "href": "assignment3.html#question-3",
+    "title": "Assignment 3",
+    "section": "Question 3",
+    "text": "Question 3\nWrite SQL codes to do the following queries:\ni. Find the ID and name of each student who has taken at least one Comp. Sci. course (no duplicates)\nSELECT DISTINCT s.ID, s.name\nFROM student s\nJOIN takes t ON s.ID = t.ID\nJOIN course c ON t.course_id = c.course_id\nWHERE c.dept_name = 'Comp. Sci.';\nii. Add grades to the list\nSELECT DISTINCT s.ID, s.name, t.grade\nFROM student s\nJOIN takes t ON s.ID = t.ID\nJOIN course c ON t.course_id = c.course_id\nWHERE c.dept_name = 'Comp. Sci.';\niii. Find students who have not taken any course offered before 2017\nSELECT s.ID, s.name\nFROM student s\nWHERE s.ID NOT IN (\n    SELECT t.ID\n    FROM takes t\n    WHERE t.year &lt; 2017\n);\niv. For each department, find the maximum salary of instructors\nSELECT dept_name, MAX(salary) AS max_salary\nFROM instructor\nGROUP BY dept_name;\nv. Find the lowest of the per-department maximum salaries\nSELECT MIN(max_salary) AS lowest_max_salary\nFROM (\n    SELECT dept_name, MAX(salary) AS max_salary\n    FROM instructor\n    GROUP BY dept_name\n) AS dept_max;\nvi. Add names to the list\nSELECT i.name, i.dept_name, i.salary\nFROM instructor i\nWHERE i.salary = (\n    SELECT MIN(max_salary)\n    FROM (\n        SELECT MAX(salary) AS max_salary\n        FROM instructor\n        GROUP BY dept_name\n    ) AS dept_max\n);"
+  },
+  {
+    "objectID": "assignment3.html#question-4",
+    "href": "assignment3.html#question-4",
+    "title": "Assignment 3",
+    "section": "Question 4",
+    "text": "Question 4\nFind instructors (with name and ID) who have never given an A grade\nSELECT i.ID, i.name\nFROM instructor i\nWHERE i.ID NOT IN (\n    SELECT te.ID\n    FROM teaches te\n    JOIN takes ta ON te.course_id = ta.course_id\n                 AND te.sec_id    = ta.sec_id\n                 AND te.semester  = ta.semester\n                 AND te.year      = ta.year\n    WHERE ta.grade = 'A'\n);"
+  },
+  {
+    "objectID": "assignment3.html#question-5",
+    "href": "assignment3.html#question-5",
+    "title": "Assignment 3",
+    "section": "Question 5",
+    "text": "Question 5\nFind the number of students in each section\nSELECT\n    course_id  AS courseid,\n    sec_id     AS secid,\n    year,\n    semester,\n    COUNT(ID)  AS num\nFROM takes\nGROUP BY course_id, sec_id, year, semester\nORDER BY course_id, sec_id, year, semester;"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -14,10 +49,38 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "assignment1.html",
-    "href": "assignment1.html",
+    "objectID": "assignments.html",
+    "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "Click here to view Assignment 1\nClick here to view Assignment 2"
+    "text": "Download Assignment 1"
+  },
+  {
+    "objectID": "assignments.html#assignment-1",
+    "href": "assignments.html#assignment-1",
+    "title": "Assignments",
+    "section": "",
+    "text": "Download Assignment 1"
+  },
+  {
+    "objectID": "assignments.html#assignment-2",
+    "href": "assignments.html#assignment-2",
+    "title": "Assignments",
+    "section": "Assignment 2",
+    "text": "Assignment 2\nDownload Assignment 2"
+  },
+  {
+    "objectID": "assignments.html#assignment-3",
+    "href": "assignments.html#assignment-3",
+    "title": "Assignments",
+    "section": "Assignment 3",
+    "text": "Assignment 3\nView Assignment 3"
+  },
+  {
+    "objectID": "assignments.html#assignment-4",
+    "href": "assignments.html#assignment-4",
+    "title": "Assignments",
+    "section": "Assignment 4",
+    "text": "Assignment 4\nView Assignment 4"
   }
 ]

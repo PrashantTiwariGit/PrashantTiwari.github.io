@@ -1,0 +1,129 @@
+---
+title: "Assignment 3"
+---
+
+## Question 2
+
+Write SQL codes to get a list of:
+
+**i. Student IDs, Instructors, and Departments**
+
+``` sql
+SELECT 
+    s.ID AS student_id,
+    s.name AS student_name,
+    i.name AS instructor_name,
+    s.dept_name AS department
+FROM student s
+JOIN takes t ON s.ID = t.ID
+JOIN teaches te ON t.course_id = te.course_id
+               AND t.sec_id = te.sec_id
+               AND t.semester = te.semester
+               AND t.year = te.year
+JOIN instructor i ON te.ID = i.ID
+ORDER BY s.ID;
+```
+
+## Question 3
+
+Write SQL codes to do the following queries:
+
+**i. Find the ID and name of each student who has taken at least one Comp. Sci. course (no duplicates)**
+
+``` sql
+SELECT DISTINCT s.ID, s.name
+FROM student s
+JOIN takes t ON s.ID = t.ID
+JOIN course c ON t.course_id = c.course_id
+WHERE c.dept_name = 'Comp. Sci.';
+```
+
+**ii. Add grades to the list**
+
+``` sql
+SELECT DISTINCT s.ID, s.name, t.grade
+FROM student s
+JOIN takes t ON s.ID = t.ID
+JOIN course c ON t.course_id = c.course_id
+WHERE c.dept_name = 'Comp. Sci.';
+```
+
+**iii. Find students who have not taken any course offered before 2017**
+
+``` sql
+SELECT s.ID, s.name
+FROM student s
+WHERE s.ID NOT IN (
+    SELECT t.ID
+    FROM takes t
+    WHERE t.year < 2017
+);
+```
+
+**iv. For each department, find the maximum salary of instructors**
+
+``` sql
+SELECT dept_name, MAX(salary) AS max_salary
+FROM instructor
+GROUP BY dept_name;
+```
+
+**v. Find the lowest of the per-department maximum salaries**
+
+``` sql
+SELECT MIN(max_salary) AS lowest_max_salary
+FROM (
+    SELECT dept_name, MAX(salary) AS max_salary
+    FROM instructor
+    GROUP BY dept_name
+) AS dept_max;
+```
+
+**vi. Add names to the list**
+
+``` sql
+SELECT i.name, i.dept_name, i.salary
+FROM instructor i
+WHERE i.salary = (
+    SELECT MIN(max_salary)
+    FROM (
+        SELECT MAX(salary) AS max_salary
+        FROM instructor
+        GROUP BY dept_name
+    ) AS dept_max
+);
+```
+
+## Question 4
+
+Find instructors (with name and ID) who have never given an A grade
+
+``` sql
+SELECT i.ID, i.name
+FROM instructor i
+WHERE i.ID NOT IN (
+    SELECT te.ID
+    FROM teaches te
+    JOIN takes ta ON te.course_id = ta.course_id
+                 AND te.sec_id    = ta.sec_id
+                 AND te.semester  = ta.semester
+                 AND te.year      = ta.year
+    WHERE ta.grade = 'A'
+);
+```
+
+## Question 5
+
+Find the number of students in each section
+
+``` sql
+SELECT
+    course_id  AS courseid,
+    sec_id     AS secid,
+    year,
+    semester,
+    COUNT(ID)  AS num
+FROM takes
+GROUP BY course_id, sec_id, year, semester
+ORDER BY course_id, sec_id, year, semester;
+```

@@ -1,6 +1,5 @@
 project:
   type: website
-  output-dir: .
   resources:
     - "Assignment 1.pptx"
     - "Assignment 2.pptx"
@@ -12,7 +11,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - assignment1.qmd
+      - href: assignments.qmd
+        text: Assignments
 
 format:
   html:
