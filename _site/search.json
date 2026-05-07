@@ -7,6 +7,34 @@
     "text": "This is a Quarto website by Prashant Tiwari for EPPS 6354.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "assignment4.html",
+    "href": "assignment4.html",
+    "title": "Assignment 4",
+    "section": "",
+    "text": "A strong entity set is an entity that can be uniquely identified by its own attributes and exists independently in a database. A weak entity set, by contrast, cannot be uniquely identified on its own and depends on a strong entity — known as the identifying entity — for both its existence and identity.\nExample: Consider a university course database. A course such as EPPS 6354 is a strong entity — it exists independently and can be uniquely identified by its own course code. It encapsulates all information about the course including its name, credits, and department.\nA course section, however — such as EPPS 6354, Section 2, Spring 2026 — is a weak entity. “Section 2” alone has no meaning or identity without knowing which course it belongs to. It cannot exist in the database if the parent course EPPS 6354 does not exist. The section’s identity is therefore entirely dependent on the strong entity (the course) that it is associated with."
+  },
+  {
+    "objectID": "assignment4.html#question-1-weak-vs-strong-entity-sets",
+    "href": "assignment4.html#question-1-weak-vs-strong-entity-sets",
+    "title": "Assignment 4",
+    "section": "",
+    "text": "A strong entity set is an entity that can be uniquely identified by its own attributes and exists independently in a database. A weak entity set, by contrast, cannot be uniquely identified on its own and depends on a strong entity — known as the identifying entity — for both its existence and identity.\nExample: Consider a university course database. A course such as EPPS 6354 is a strong entity — it exists independently and can be uniquely identified by its own course code. It encapsulates all information about the course including its name, credits, and department.\nA course section, however — such as EPPS 6354, Section 2, Spring 2026 — is a weak entity. “Section 2” alone has no meaning or identity without knowing which course it belongs to. It cannot exist in the database if the parent course EPPS 6354 does not exist. The section’s identity is therefore entirely dependent on the strong entity (the course) that it is associated with."
+  },
+  {
+    "objectID": "assignment4.html#question-2-e-r-diagram-for-sports-team-scoring-statistics",
+    "href": "assignment4.html#question-2-e-r-diagram-for-sports-team-scoring-statistics",
+    "title": "Assignment 4",
+    "section": "Question 2: E-R Diagram for Sports Team Scoring Statistics",
+    "text": "Question 2: E-R Diagram for Sports Team Scoring Statistics\n\nPart A: Single Team\nThe E-R diagram tracks the scoring statistics of a single sports team and consists of the following entities and relationships:\nEntities:\n\nPlayer — represents each player on the team. Attributes include player_id (primary key), name, and age. The derived attribute season_score() is computed by summing the individual score values associated with the player across all matches via the played relationship.\nMatch — represents each match played by the team. Attributes include match_id (primary key), date, stadium, opponent, own_score, and opp_score.\n\nRelationship:\n\nPlayed — a many-to-many relationship connecting Player to Match, representing which players participated in which matches. It carries the attribute score, which records the individual player’s scoring contribution in that specific match.\n\nDerived Attribute:\n\nseason_score() on the Player entity is derived by summing all score values linked to that player through the played relationship across all matches in the season.\n\n\n\nPart B: Expanded to All Teams in the League\nTo expand the diagram to track all teams in the league, a Team entity is added:\nAdditional Entity:\n\nTeam — represents each team in the league. Attributes include team_id (primary key), team_name, and city. The derived attribute season_wins() is computed by counting all matches where own_score is greater than opp_score.\n\nAdditional Relationships:\n\nplays_for — a many-to-one relationship connecting Player to Team, indicating which team each player belongs to.\nplays_in — a many-to-many relationship connecting Team to Match, indicating which teams participated in each match.\n\nThis expansion allows the database to track statistics not just for one team but for every team and player across the entire league.\n!er diagram"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
     "objectID": "assignment3.html",
     "href": "assignment3.html",
     "title": "Assignment 3",
@@ -40,13 +68,6 @@
     "title": "Assignment 3",
     "section": "Question 5",
     "text": "Question 5\nFind the number of students in each section\nSELECT\n    course_id  AS courseid,\n    sec_id     AS secid,\n    year,\n    semester,\n    COUNT(ID)  AS num\nFROM takes\nGROUP BY course_id, sec_id, year, semester\nORDER BY course_id, sec_id, year, semester;"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "assignments.html",

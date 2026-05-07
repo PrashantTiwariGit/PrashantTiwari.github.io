@@ -17,3 +17,15 @@ title: "Assignments"
 ## Assignment 4
 
 [View Assignment 4](assignment4.html)
+
+## Assignment 5
+
+[View Assignment 5](assignment5.html)
+
+## Assignment 6
+
+[View Assignment 6](assignment6.html)
+
+## Assignment 7
+
+[View Assignment 7](assignment7.html)

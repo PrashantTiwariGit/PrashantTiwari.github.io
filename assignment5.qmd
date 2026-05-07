@@ -1,0 +1,61 @@
+---
+title: "Assignment 5"
+---
+
+## Question 1: E-R Diagram as a Graph
+
+### Part A: The Graph is Disconnected
+
+When an E-R diagram is disconnected, the entities in question share no relationship and no data with each other. What one entity represents is entirely independent of the other, meaning the enterprise schema contains two or more completely separate subsystems that have no interaction or dependency.
+
+### Part B: The Graph has a Cycle
+
+When an E-R diagram contains a cycle, every entity in the cycle is directly or indirectly dependent on every other entity within it, meaning they all share relationships and data with one another. This is generally a natural and desirable property of enterprise schemas, as it allows information to be derived through multiple relationship paths, reducing redundancy and making queries more efficient.
+
+------------------------------------------------------------------------
+
+## Question 3: Why Do We Have Weak Entity Sets?
+
+Although weak entity sets could theoretically be converted to strong entity sets by simply adding unique identifiers, doing so would introduce unnecessary complexity into the schema. Weak entity sets derive their identity naturally from their relationship with a strong entity, meaning their attributes can be accessed and queried through the identifying entity without the overhead of managing redundant artificial keys across the database.
+
+------------------------------------------------------------------------
+
+## Question 4: SQL Exercises
+
+### Part A: Employee Database Queries
+
+**Query i — Employees who live in the same city as their company**
+
+``` sql
+SELECT e.ID, e.person_name
+FROM employee AS e, works AS w, company AS c
+WHERE e.city = c.city
+AND e.ID = w.ID
+AND w.company_name = c.company_name
+```
+
+**Query ii — Employees who live on the same street and city as their manager**
+
+``` sql
+SELECT e.ID, e.person_name
+FROM employee AS e, employee AS m, manages AS mg
+WHERE e.ID = mg.ID
+AND m.ID = mg.manager_id
+AND e.city = m.city
+AND e.street = m.street
+```
+
+**Query iii — Employees who earn more than the average salary at their company**
+
+``` sql
+SELECT e.ID, e.person_name
+FROM employee AS e, works AS w
+WHERE e.ID = w.ID
+AND w.salary > (SELECT AVG(salary)
+                FROM works
+                WHERE company_name = w.company_name)
+```
+
+### Part B: What is Wrong with the Natural Join Query?
+
+The issue with the query is the use of NATURAL JOIN across multiple tables. Since NATURAL JOIN automatically joins on all shared column names, it matches rows only where every shared column is identical across all four tables simultaneously. This becomes problematic because an instructor can teach multiple courses and sections — the unintended matching on shared columns like course_id and sec_id across tables will incorrectly filter out valid rows, producing an incomplete result.
