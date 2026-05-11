@@ -7,53 +7,88 @@
     "text": "This is a Quarto website by Prashant Tiwari for EPPS 6354.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "assignment7.html",
-    "href": "assignment7.html",
-    "title": "Assignment 7: AI Lab - Shiny Applications",
+    "objectID": "assignment8.html",
+    "href": "assignment8.html",
+    "title": "Assignment 8: NBA Database Shiny App",
     "section": "",
-    "text": "The app connects to a local PostgreSQL university database and displays average instructor salaries by department, sorted from highest to lowest.\n\n\n\nAverage Instructor Salary by Department\n\n\n\n\n\nModified the SQL query to pull student count data from the student table instead of salary data from the instructor table.\n\n\n\nNumber of Students by Department"
+    "text": "This assignment involved building an NBA player database Shiny application following a multi-step workflow:\n\nImported the NBA database from SQL file using DB Browser for SQLite\nConnected the SQLite database to R Shiny\nBuilt an interactive app allowing users to browse active NBA players with photos using a slider to control the number of rows displayed\nDeployed the app to shinyapps.io"
   },
   {
-    "objectID": "assignment7.html#part-1-university-database-instructor-salaries",
-    "href": "assignment7.html#part-1-university-database-instructor-salaries",
-    "title": "Assignment 7: AI Lab - Shiny Applications",
+    "objectID": "assignment8.html#overview",
+    "href": "assignment8.html#overview",
+    "title": "Assignment 8: NBA Database Shiny App",
     "section": "",
-    "text": "The app connects to a local PostgreSQL university database and displays average instructor salaries by department, sorted from highest to lowest.\n\n\n\nAverage Instructor Salary by Department\n\n\n\n\n\nModified the SQL query to pull student count data from the student table instead of salary data from the instructor table.\n\n\n\nNumber of Students by Department"
+    "text": "This assignment involved building an NBA player database Shiny application following a multi-step workflow:\n\nImported the NBA database from SQL file using DB Browser for SQLite\nConnected the SQLite database to R Shiny\nBuilt an interactive app allowing users to browse active NBA players with photos using a slider to control the number of rows displayed\nDeployed the app to shinyapps.io"
   },
   {
-    "objectID": "assignment7.html#part-2-old-faithful-geyser-data-color-change",
-    "href": "assignment7.html#part-2-old-faithful-geyser-data-color-change",
-    "title": "Assignment 7: AI Lab - Shiny Applications",
-    "section": "Part 2: Old Faithful Geyser Data — Color Change",
-    "text": "Part 2: Old Faithful Geyser Data — Color Change\nModified the bar chart color from the default gray to mediumpurple.\n\n\n\nOld Faithful Histogram in Purple"
+    "objectID": "assignment8.html#live-app",
+    "href": "assignment8.html#live-app",
+    "title": "Assignment 8: NBA Database Shiny App",
+    "section": "Live App",
+    "text": "Live App\nClick here to view the NBA Database Shiny App"
   },
   {
-    "objectID": "assignment5.html",
-    "href": "assignment5.html",
-    "title": "Assignment 5",
+    "objectID": "assignment8.html#screenshot",
+    "href": "assignment8.html#screenshot",
+    "title": "Assignment 8: NBA Database Shiny App",
+    "section": "Screenshot",
+    "text": "Screenshot\n\n\n\nNBA Shiny App"
+  },
+  {
+    "objectID": "assignment6.html",
+    "href": "assignment6.html",
+    "title": "Assignment 6",
     "section": "",
-    "text": "When an E-R diagram is disconnected, the entities in question share no relationship and no data with each other. What one entity represents is entirely independent of the other, meaning the enterprise schema contains two or more completely separate subsystems that have no interaction or dependency.\n\n\n\nWhen an E-R diagram contains a cycle, every entity in the cycle is directly or indirectly dependent on every other entity within it, meaning they all share relationships and data with one another. This is generally a natural and desirable property of enterprise schemas, as it allows information to be derived through multiple relationship paths, reducing redundancy and making queries more efficient."
+    "text": "Reddit’s API serves all of its data in JSON format, accessible by adding .json to any Reddit URL (e.g., reddit.com/r/economics.json). The structure consists of nested key-value pairs where each object represents a data entity such as a post, comment, or user. Data is organized hierarchically — a subreddit response contains a data object, which contains a children array, with each child representing an individual post and its attributes like title, score, author, and URL. Reddit’s technology stack uses REST APIs with React.js on the frontend to parse and dynamically render this JSON data into the familiar Reddit interface users see.\n\n\n\nReddit also publishes subreddit content as XML-based RSS feeds, accessible by adding .rss to any subreddit URL (e.g., reddit.com/r/economics.rss). Each post is wrapped in item tags containing child elements like title, link, description, and pubDate. The structure is self-describing — each tag explicitly labels what the data represents. RSS feed readers and browsers parse this XML to display news and content updates. XML is used here because RSS is a long-established standard for content syndication that predates JSON’s rise in popularity.\n\n\n\nBoth formats represent the same Reddit data but in different ways. JSON is more compact, easier to parse in modern web applications, and maps directly to JavaScript objects. XML is more verbose but better suited for content syndication and is supported by a wider range of legacy feed readers and platforms."
   },
   {
-    "objectID": "assignment5.html#question-1-e-r-diagram-as-a-graph",
-    "href": "assignment5.html#question-1-e-r-diagram-as-a-graph",
-    "title": "Assignment 5",
+    "objectID": "assignment6.html#question-1-json-and-xml-data-representations",
+    "href": "assignment6.html#question-1-json-and-xml-data-representations",
+    "title": "Assignment 6",
     "section": "",
-    "text": "When an E-R diagram is disconnected, the entities in question share no relationship and no data with each other. What one entity represents is entirely independent of the other, meaning the enterprise schema contains two or more completely separate subsystems that have no interaction or dependency.\n\n\n\nWhen an E-R diagram contains a cycle, every entity in the cycle is directly or indirectly dependent on every other entity within it, meaning they all share relationships and data with one another. This is generally a natural and desirable property of enterprise schemas, as it allows information to be derived through multiple relationship paths, reducing redundancy and making queries more efficient."
+    "text": "Reddit’s API serves all of its data in JSON format, accessible by adding .json to any Reddit URL (e.g., reddit.com/r/economics.json). The structure consists of nested key-value pairs where each object represents a data entity such as a post, comment, or user. Data is organized hierarchically — a subreddit response contains a data object, which contains a children array, with each child representing an individual post and its attributes like title, score, author, and URL. Reddit’s technology stack uses REST APIs with React.js on the frontend to parse and dynamically render this JSON data into the familiar Reddit interface users see.\n\n\n\nReddit also publishes subreddit content as XML-based RSS feeds, accessible by adding .rss to any subreddit URL (e.g., reddit.com/r/economics.rss). Each post is wrapped in item tags containing child elements like title, link, description, and pubDate. The structure is self-describing — each tag explicitly labels what the data represents. RSS feed readers and browsers parse this XML to display news and content updates. XML is used here because RSS is a long-established standard for content syndication that predates JSON’s rise in popularity.\n\n\n\nBoth formats represent the same Reddit data but in different ways. JSON is more compact, easier to parse in modern web applications, and maps directly to JavaScript objects. XML is more verbose but better suited for content syndication and is supported by a wider range of legacy feed readers and platforms."
   },
   {
-    "objectID": "assignment5.html#question-3-why-do-we-have-weak-entity-sets",
-    "href": "assignment5.html#question-3-why-do-we-have-weak-entity-sets",
-    "title": "Assignment 5",
-    "section": "Question 3: Why Do We Have Weak Entity Sets?",
-    "text": "Question 3: Why Do We Have Weak Entity Sets?\nAlthough weak entity sets could theoretically be converted to strong entity sets by simply adding unique identifiers, doing so would introduce unnecessary complexity into the schema. Weak entity sets derive their identity naturally from their relationship with a strong entity, meaning their attributes can be accessed and queried through the identifying entity without the overhead of managing redundant artificial keys across the database."
+    "objectID": "assignment6.html#question-2-sql-exercises",
+    "href": "assignment6.html#question-2-sql-exercises",
+    "title": "Assignment 6",
+    "section": "Question 2: SQL Exercises",
+    "text": "Question 2: SQL Exercises\n\nQuery i — Students with no advisor (using LEFT OUTER JOIN)\nSELECT student.ID\nFROM student LEFT OUTER JOIN advisor ON student.ID = advisor.s_ID\nWHERE advisor.i_ID IS NULL\n\n\nQuery ii — Instructors who teach every course in their department\nSELECT DISTINCT i.ID, i.name\nFROM instructor AS i\nWHERE NOT EXISTS (\n    SELECT course_id FROM course\n    WHERE dept_name = i.dept_name\n    AND NOT EXISTS (\n        SELECT course_id FROM teaches\n        WHERE teaches.ID = i.ID\n        AND teaches.course_id = course.course_id\n    )\n)\nORDER BY i.name"
   },
   {
-    "objectID": "assignment5.html#question-4-sql-exercises",
-    "href": "assignment5.html#question-4-sql-exercises",
-    "title": "Assignment 5",
-    "section": "Question 4: SQL Exercises",
-    "text": "Question 4: SQL Exercises\n\nPart A: Employee Database Queries\nQuery i — Employees who live in the same city as their company\nSELECT e.ID, e.person_name\nFROM employee AS e, works AS w, company AS c\nWHERE e.city = c.city\nAND e.ID = w.ID\nAND w.company_name = c.company_name\nQuery ii — Employees who live on the same street and city as their manager\nSELECT e.ID, e.person_name\nFROM employee AS e, employee AS m, manages AS mg\nWHERE e.ID = mg.ID\nAND m.ID = mg.manager_id\nAND e.city = m.city\nAND e.street = m.street\nQuery iii — Employees who earn more than the average salary at their company\nSELECT e.ID, e.person_name\nFROM employee AS e, works AS w\nWHERE e.ID = w.ID\nAND w.salary &gt; (SELECT AVG(salary)\n                FROM works\n                WHERE company_name = w.company_name)\n\n\nPart B: What is Wrong with the Natural Join Query?\nThe issue with the query is the use of NATURAL JOIN across multiple tables. Since NATURAL JOIN automatically joins on all shared column names, it matches rows only where every shared column is identical across all four tables simultaneously. This becomes problematic because an instructor can teach multiple courses and sections — the unintended matching on shared columns like course_id and sec_id across tables will incorrectly filter out valid rows, producing an incomplete result."
+    "objectID": "assignment6.html#question-3-r-and-postgresql",
+    "href": "assignment6.html#question-3-r-and-postgresql",
+    "title": "Assignment 6",
+    "section": "Question 3: R and PostgreSQL",
+    "text": "Question 3: R and PostgreSQL\n\nSetup\nThe university database was imported into PostgreSQL using the large relations SQL file from the textbook website. The following R packages were used to connect and query the database: DBI, RPostgres, and odbc.\n\n\nResults\nlibrary(RPostgres)\nlibrary(DBI)\n\ncon &lt;- dbConnect(\n  RPostgres::Postgres(),\n  dbname   = \"university\",\n  host     = \"localhost\",\n  port     = 5432,\n  user     = \"postgres\",\n  password = \"yourpassword\"\n)\n\n# Query 1: All instructors\ninstructor_data &lt;- dbGetQuery(con, \"SELECT * FROM instructor\")\nhead(instructor_data)\n\n# Query 2: Comp. Sci. instructors with salary over 60,000\ncomp_sci &lt;- dbGetQuery(con,\n  \"SELECT * FROM instructor\n   WHERE dept_name = 'Comp. Sci.' AND salary &gt; 60000\")\n\n# Query 3: Students with more than 50 credits\nstudents &lt;- dbGetQuery(con,\n  \"SELECT * FROM student WHERE tot_cred &gt;= 50\")\n\ndbDisconnect(con)\n\n\nScreenshots\n\n\n\nInstructor Data\n\n\n\n\n\nComp Sci Instructors\n\n\n\n\n\nStudents with 50+ Credits"
+  },
+  {
+    "objectID": "assignment4.html",
+    "href": "assignment4.html",
+    "title": "Assignment 4",
+    "section": "",
+    "text": "A strong entity set is an entity that can be uniquely identified by its own attributes and exists independently in a database. A weak entity set, by contrast, cannot be uniquely identified on its own and depends on a strong entity — known as the identifying entity — for both its existence and identity.\nExample: Consider a university course database. A course such as EPPS 6354 is a strong entity — it exists independently and can be uniquely identified by its own course code. It encapsulates all information about the course including its name, credits, and department.\nA course section, however — such as EPPS 6354, Section 2, Spring 2026 — is a weak entity. “Section 2” alone has no meaning or identity without knowing which course it belongs to. It cannot exist in the database if the parent course EPPS 6354 does not exist. The section’s identity is therefore entirely dependent on the strong entity (the course) that it is associated with."
+  },
+  {
+    "objectID": "assignment4.html#question-1-weak-vs-strong-entity-sets",
+    "href": "assignment4.html#question-1-weak-vs-strong-entity-sets",
+    "title": "Assignment 4",
+    "section": "",
+    "text": "A strong entity set is an entity that can be uniquely identified by its own attributes and exists independently in a database. A weak entity set, by contrast, cannot be uniquely identified on its own and depends on a strong entity — known as the identifying entity — for both its existence and identity.\nExample: Consider a university course database. A course such as EPPS 6354 is a strong entity — it exists independently and can be uniquely identified by its own course code. It encapsulates all information about the course including its name, credits, and department.\nA course section, however — such as EPPS 6354, Section 2, Spring 2026 — is a weak entity. “Section 2” alone has no meaning or identity without knowing which course it belongs to. It cannot exist in the database if the parent course EPPS 6354 does not exist. The section’s identity is therefore entirely dependent on the strong entity (the course) that it is associated with."
+  },
+  {
+    "objectID": "assignment4.html#question-2-e-r-diagram-for-sports-team-scoring-statistics",
+    "href": "assignment4.html#question-2-e-r-diagram-for-sports-team-scoring-statistics",
+    "title": "Assignment 4",
+    "section": "Question 2: E-R Diagram for Sports Team Scoring Statistics",
+    "text": "Question 2: E-R Diagram for Sports Team Scoring Statistics\n\nPart A: Single Team\nThe E-R diagram tracks the scoring statistics of a single sports team and consists of the following entities and relationships:\nEntities:\n\nPlayer — represents each player on the team. Attributes include player_id (primary key), name, and age. The derived attribute season_score() is computed by summing the individual score values associated with the player across all matches via the played relationship.\nMatch — represents each match played by the team. Attributes include match_id (primary key), date, stadium, opponent, own_score, and opp_score.\n\nRelationship:\n\nPlayed — a many-to-many relationship connecting Player to Match, representing which players participated in which matches. It carries the attribute score, which records the individual player’s scoring contribution in that specific match.\n\nDerived Attribute:\n\nseason_score() on the Player entity is derived by summing all score values linked to that player through the played relationship across all matches in the season.\n\n\n\nPart B: Expanded to All Teams in the League\nTo expand the diagram to track all teams in the league, a Team entity is added:\nAdditional Entity:\n\nTeam — represents each team in the league. Attributes include team_id (primary key), team_name, and city. The derived attribute season_wins() is computed by counting all matches where own_score is greater than opp_score.\n\nAdditional Relationships:\n\nplays_for — a many-to-one relationship connecting Player to Team, indicating which team each player belongs to.\nplays_in — a many-to-many relationship connecting Team to Match, indicating which teams participated in each match.\n\nThis expansion allows the database to track statistics not just for one team but for every team and player across the entire league.\n!er diagram"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "assignment3.html",
@@ -91,60 +126,53 @@
     "text": "Question 5\nFind the number of students in each section\nSELECT\n    course_id  AS courseid,\n    sec_id     AS secid,\n    year,\n    semester,\n    COUNT(ID)  AS num\nFROM takes\nGROUP BY course_id, sec_id, year, semester\nORDER BY course_id, sec_id, year, semester;"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "assignment5.html",
+    "href": "assignment5.html",
+    "title": "Assignment 5",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "When an E-R diagram is disconnected, the entities in question share no relationship and no data with each other. What one entity represents is entirely independent of the other, meaning the enterprise schema contains two or more completely separate subsystems that have no interaction or dependency.\n\n\n\nWhen an E-R diagram contains a cycle, every entity in the cycle is directly or indirectly dependent on every other entity within it, meaning they all share relationships and data with one another. This is generally a natural and desirable property of enterprise schemas, as it allows information to be derived through multiple relationship paths, reducing redundancy and making queries more efficient."
   },
   {
-    "objectID": "assignment4.html",
-    "href": "assignment4.html",
-    "title": "Assignment 4",
+    "objectID": "assignment5.html#question-1-e-r-diagram-as-a-graph",
+    "href": "assignment5.html#question-1-e-r-diagram-as-a-graph",
+    "title": "Assignment 5",
     "section": "",
-    "text": "A strong entity set is an entity that can be uniquely identified by its own attributes and exists independently in a database. A weak entity set, by contrast, cannot be uniquely identified on its own and depends on a strong entity — known as the identifying entity — for both its existence and identity.\nExample: Consider a university course database. A course such as EPPS 6354 is a strong entity — it exists independently and can be uniquely identified by its own course code. It encapsulates all information about the course including its name, credits, and department.\nA course section, however — such as EPPS 6354, Section 2, Spring 2026 — is a weak entity. “Section 2” alone has no meaning or identity without knowing which course it belongs to. It cannot exist in the database if the parent course EPPS 6354 does not exist. The section’s identity is therefore entirely dependent on the strong entity (the course) that it is associated with."
+    "text": "When an E-R diagram is disconnected, the entities in question share no relationship and no data with each other. What one entity represents is entirely independent of the other, meaning the enterprise schema contains two or more completely separate subsystems that have no interaction or dependency.\n\n\n\nWhen an E-R diagram contains a cycle, every entity in the cycle is directly or indirectly dependent on every other entity within it, meaning they all share relationships and data with one another. This is generally a natural and desirable property of enterprise schemas, as it allows information to be derived through multiple relationship paths, reducing redundancy and making queries more efficient."
   },
   {
-    "objectID": "assignment4.html#question-1-weak-vs-strong-entity-sets",
-    "href": "assignment4.html#question-1-weak-vs-strong-entity-sets",
-    "title": "Assignment 4",
+    "objectID": "assignment5.html#question-3-why-do-we-have-weak-entity-sets",
+    "href": "assignment5.html#question-3-why-do-we-have-weak-entity-sets",
+    "title": "Assignment 5",
+    "section": "Question 3: Why Do We Have Weak Entity Sets?",
+    "text": "Question 3: Why Do We Have Weak Entity Sets?\nAlthough weak entity sets could theoretically be converted to strong entity sets by simply adding unique identifiers, doing so would introduce unnecessary complexity into the schema. Weak entity sets derive their identity naturally from their relationship with a strong entity, meaning their attributes can be accessed and queried through the identifying entity without the overhead of managing redundant artificial keys across the database."
+  },
+  {
+    "objectID": "assignment5.html#question-4-sql-exercises",
+    "href": "assignment5.html#question-4-sql-exercises",
+    "title": "Assignment 5",
+    "section": "Question 4: SQL Exercises",
+    "text": "Question 4: SQL Exercises\n\nPart A: Employee Database Queries\nQuery i — Employees who live in the same city as their company\nSELECT e.ID, e.person_name\nFROM employee AS e, works AS w, company AS c\nWHERE e.city = c.city\nAND e.ID = w.ID\nAND w.company_name = c.company_name\nQuery ii — Employees who live on the same street and city as their manager\nSELECT e.ID, e.person_name\nFROM employee AS e, employee AS m, manages AS mg\nWHERE e.ID = mg.ID\nAND m.ID = mg.manager_id\nAND e.city = m.city\nAND e.street = m.street\nQuery iii — Employees who earn more than the average salary at their company\nSELECT e.ID, e.person_name\nFROM employee AS e, works AS w\nWHERE e.ID = w.ID\nAND w.salary &gt; (SELECT AVG(salary)\n                FROM works\n                WHERE company_name = w.company_name)\n\n\nPart B: What is Wrong with the Natural Join Query?\nThe issue with the query is the use of NATURAL JOIN across multiple tables. Since NATURAL JOIN automatically joins on all shared column names, it matches rows only where every shared column is identical across all four tables simultaneously. This becomes problematic because an instructor can teach multiple courses and sections — the unintended matching on shared columns like course_id and sec_id across tables will incorrectly filter out valid rows, producing an incomplete result."
+  },
+  {
+    "objectID": "assignment7.html",
+    "href": "assignment7.html",
+    "title": "Assignment 7: AI Lab - Shiny Applications",
     "section": "",
-    "text": "A strong entity set is an entity that can be uniquely identified by its own attributes and exists independently in a database. A weak entity set, by contrast, cannot be uniquely identified on its own and depends on a strong entity — known as the identifying entity — for both its existence and identity.\nExample: Consider a university course database. A course such as EPPS 6354 is a strong entity — it exists independently and can be uniquely identified by its own course code. It encapsulates all information about the course including its name, credits, and department.\nA course section, however — such as EPPS 6354, Section 2, Spring 2026 — is a weak entity. “Section 2” alone has no meaning or identity without knowing which course it belongs to. It cannot exist in the database if the parent course EPPS 6354 does not exist. The section’s identity is therefore entirely dependent on the strong entity (the course) that it is associated with."
+    "text": "The app connects to a local PostgreSQL university database and displays average instructor salaries by department, sorted from highest to lowest.\n\n\n\nAverage Instructor Salary by Department\n\n\n\n\n\nModified the SQL query to pull student count data from the student table instead of salary data from the instructor table.\n\n\n\nNumber of Students by Department"
   },
   {
-    "objectID": "assignment4.html#question-2-e-r-diagram-for-sports-team-scoring-statistics",
-    "href": "assignment4.html#question-2-e-r-diagram-for-sports-team-scoring-statistics",
-    "title": "Assignment 4",
-    "section": "Question 2: E-R Diagram for Sports Team Scoring Statistics",
-    "text": "Question 2: E-R Diagram for Sports Team Scoring Statistics\n\nPart A: Single Team\nThe E-R diagram tracks the scoring statistics of a single sports team and consists of the following entities and relationships:\nEntities:\n\nPlayer — represents each player on the team. Attributes include player_id (primary key), name, and age. The derived attribute season_score() is computed by summing the individual score values associated with the player across all matches via the played relationship.\nMatch — represents each match played by the team. Attributes include match_id (primary key), date, stadium, opponent, own_score, and opp_score.\n\nRelationship:\n\nPlayed — a many-to-many relationship connecting Player to Match, representing which players participated in which matches. It carries the attribute score, which records the individual player’s scoring contribution in that specific match.\n\nDerived Attribute:\n\nseason_score() on the Player entity is derived by summing all score values linked to that player through the played relationship across all matches in the season.\n\n\n\nPart B: Expanded to All Teams in the League\nTo expand the diagram to track all teams in the league, a Team entity is added:\nAdditional Entity:\n\nTeam — represents each team in the league. Attributes include team_id (primary key), team_name, and city. The derived attribute season_wins() is computed by counting all matches where own_score is greater than opp_score.\n\nAdditional Relationships:\n\nplays_for — a many-to-one relationship connecting Player to Team, indicating which team each player belongs to.\nplays_in — a many-to-many relationship connecting Team to Match, indicating which teams participated in each match.\n\nThis expansion allows the database to track statistics not just for one team but for every team and player across the entire league.\n!er diagram"
-  },
-  {
-    "objectID": "assignment6.html",
-    "href": "assignment6.html",
-    "title": "Assignment 6",
+    "objectID": "assignment7.html#part-1-university-database-instructor-salaries",
+    "href": "assignment7.html#part-1-university-database-instructor-salaries",
+    "title": "Assignment 7: AI Lab - Shiny Applications",
     "section": "",
-    "text": "Reddit’s API serves all of its data in JSON format, accessible by adding .json to any Reddit URL (e.g., reddit.com/r/economics.json). The structure consists of nested key-value pairs where each object represents a data entity such as a post, comment, or user. Data is organized hierarchically — a subreddit response contains a data object, which contains a children array, with each child representing an individual post and its attributes like title, score, author, and URL. Reddit’s technology stack uses REST APIs with React.js on the frontend to parse and dynamically render this JSON data into the familiar Reddit interface users see.\n\n\n\nReddit also publishes subreddit content as XML-based RSS feeds, accessible by adding .rss to any subreddit URL (e.g., reddit.com/r/economics.rss). Each post is wrapped in item tags containing child elements like title, link, description, and pubDate. The structure is self-describing — each tag explicitly labels what the data represents. RSS feed readers and browsers parse this XML to display news and content updates. XML is used here because RSS is a long-established standard for content syndication that predates JSON’s rise in popularity.\n\n\n\nBoth formats represent the same Reddit data but in different ways. JSON is more compact, easier to parse in modern web applications, and maps directly to JavaScript objects. XML is more verbose but better suited for content syndication and is supported by a wider range of legacy feed readers and platforms."
+    "text": "The app connects to a local PostgreSQL university database and displays average instructor salaries by department, sorted from highest to lowest.\n\n\n\nAverage Instructor Salary by Department\n\n\n\n\n\nModified the SQL query to pull student count data from the student table instead of salary data from the instructor table.\n\n\n\nNumber of Students by Department"
   },
   {
-    "objectID": "assignment6.html#question-1-json-and-xml-data-representations",
-    "href": "assignment6.html#question-1-json-and-xml-data-representations",
-    "title": "Assignment 6",
-    "section": "",
-    "text": "Reddit’s API serves all of its data in JSON format, accessible by adding .json to any Reddit URL (e.g., reddit.com/r/economics.json). The structure consists of nested key-value pairs where each object represents a data entity such as a post, comment, or user. Data is organized hierarchically — a subreddit response contains a data object, which contains a children array, with each child representing an individual post and its attributes like title, score, author, and URL. Reddit’s technology stack uses REST APIs with React.js on the frontend to parse and dynamically render this JSON data into the familiar Reddit interface users see.\n\n\n\nReddit also publishes subreddit content as XML-based RSS feeds, accessible by adding .rss to any subreddit URL (e.g., reddit.com/r/economics.rss). Each post is wrapped in item tags containing child elements like title, link, description, and pubDate. The structure is self-describing — each tag explicitly labels what the data represents. RSS feed readers and browsers parse this XML to display news and content updates. XML is used here because RSS is a long-established standard for content syndication that predates JSON’s rise in popularity.\n\n\n\nBoth formats represent the same Reddit data but in different ways. JSON is more compact, easier to parse in modern web applications, and maps directly to JavaScript objects. XML is more verbose but better suited for content syndication and is supported by a wider range of legacy feed readers and platforms."
-  },
-  {
-    "objectID": "assignment6.html#question-2-sql-exercises",
-    "href": "assignment6.html#question-2-sql-exercises",
-    "title": "Assignment 6",
-    "section": "Question 2: SQL Exercises",
-    "text": "Question 2: SQL Exercises\n\nQuery i — Students with no advisor (using LEFT OUTER JOIN)\nSELECT student.ID\nFROM student LEFT OUTER JOIN advisor ON student.ID = advisor.s_ID\nWHERE advisor.i_ID IS NULL\n\n\nQuery ii — Instructors who teach every course in their department\nSELECT DISTINCT i.ID, i.name\nFROM instructor AS i\nWHERE NOT EXISTS (\n    SELECT course_id FROM course\n    WHERE dept_name = i.dept_name\n    AND NOT EXISTS (\n        SELECT course_id FROM teaches\n        WHERE teaches.ID = i.ID\n        AND teaches.course_id = course.course_id\n    )\n)\nORDER BY i.name"
-  },
-  {
-    "objectID": "assignment6.html#question-3-r-and-postgresql",
-    "href": "assignment6.html#question-3-r-and-postgresql",
-    "title": "Assignment 6",
-    "section": "Question 3: R and PostgreSQL",
-    "text": "Question 3: R and PostgreSQL\n\nSetup\nThe university database was imported into PostgreSQL using the large relations SQL file from the textbook website. The following R packages were used to connect and query the database: DBI, RPostgres, and odbc.\n\n\nResults\nlibrary(RPostgres)\nlibrary(DBI)\n\ncon &lt;- dbConnect(\n  RPostgres::Postgres(),\n  dbname   = \"university\",\n  host     = \"localhost\",\n  port     = 5432,\n  user     = \"postgres\",\n  password = \"yourpassword\"\n)\n\n# Query 1: All instructors\ninstructor_data &lt;- dbGetQuery(con, \"SELECT * FROM instructor\")\nhead(instructor_data)\n\n# Query 2: Comp. Sci. instructors with salary over 60,000\ncomp_sci &lt;- dbGetQuery(con,\n  \"SELECT * FROM instructor\n   WHERE dept_name = 'Comp. Sci.' AND salary &gt; 60000\")\n\n# Query 3: Students with more than 50 credits\nstudents &lt;- dbGetQuery(con,\n  \"SELECT * FROM student WHERE tot_cred &gt;= 50\")\n\ndbDisconnect(con)\n\n\nScreenshots\n\n\n\nInstructor Data\n\n\n\n\n\nComp Sci Instructors\n\n\n\n\n\nStudents with 50+ Credits"
+    "objectID": "assignment7.html#part-2-old-faithful-geyser-data-color-change",
+    "href": "assignment7.html#part-2-old-faithful-geyser-data-color-change",
+    "title": "Assignment 7: AI Lab - Shiny Applications",
+    "section": "Part 2: Old Faithful Geyser Data — Color Change",
+    "text": "Part 2: Old Faithful Geyser Data — Color Change\nModified the bar chart color from the default gray to mediumpurple.\n\n\n\nOld Faithful Histogram in Purple"
   },
   {
     "objectID": "assignments.html",
@@ -194,5 +222,19 @@
     "title": "Assignments",
     "section": "Assignment 6",
     "text": "Assignment 6\nView Assignment 6"
+  },
+  {
+    "objectID": "assignments.html#assignment-7",
+    "href": "assignments.html#assignment-7",
+    "title": "Assignments",
+    "section": "Assignment 7",
+    "text": "Assignment 7\nView Assignment 7"
+  },
+  {
+    "objectID": "assignments.html#assignment-8",
+    "href": "assignments.html#assignment-8",
+    "title": "Assignments",
+    "section": "Assignment 8",
+    "text": "Assignment 8\nView Assignment 8"
   }
 ]
