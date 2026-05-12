@@ -22,4 +22,4 @@ Modified the SQL query to pull student count data from the student table instead
 
 Modified the bar chart color from the default gray to mediumpurple.
 
-![Old Faithful Histogram in Purple](ASsignemnt_7_part_2.png)
+![Old Faithful Histogram in Purple](Assignment7_part_2.png)
