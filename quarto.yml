@@ -9,12 +9,10 @@ website:
   title: "prashanttiwari.github.io"
   navbar:
     left:
-      - href: index.qmd
+      - href: about.qmd
         text: Home
       - href: assignments.qmd
         text: Assignments
-      - href: tennisproject.qmd
-        text: Tennis Project
 
 format:
   html:

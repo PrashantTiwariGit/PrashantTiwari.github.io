@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignments – prashanttiwari.github.io</title>
+<title>Tennis Statistics Database Project – prashanttiwari.github.io</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,12 +95,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="./assignments.html"> 
+<span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./assignment1.html" aria-current="page"> 
-<span class="menu-text">Assignments</span></a>
+    <a class="nav-link active" href="./tennisproject.html" aria-current="page"> 
+<span class="menu-text">Tennis Project</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -113,15 +113,28 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#tech-stack" id="toc-tech-stack" class="nav-link" data-scroll-target="#tech-stack">Tech Stack</a></li>
+  <li><a href="#database-schema" id="toc-database-schema" class="nav-link" data-scroll-target="#database-schema">Database Schema</a></li>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data Source</a></li>
+  <li><a href="#current-status" id="toc-current-status" class="nav-link" data-scroll-target="#current-status">Current Status</a></li>
+  <li><a href="#live-app" id="toc-live-app" class="nav-link" data-scroll-target="#live-app">Live App</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignments</h1>
+<h1 class="title">Tennis Statistics Database Project</h1>
 </div>
 
 
@@ -138,10 +151,55 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="Assignment 1.pptx">Click here to view Assignment 1</a></p>
-<p><a href="Assignment 2.pptx">Click here to view Assignment 2</a></p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This project aims to build a granular database of detailed statistics for top 100 ATP tennis players, paired with an interactive Shiny interface for querying player and match data. The goal is to provide a more accessible and detailed alternative to existing platforms like TennisViz, which are either paywalled or limited in granularity.</p>
+<hr>
+</section>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
+<p>As an avid tennis player myself, I wanted to build a tool that goes beyond surface level statistics. The database is designed to capture things like average and maximum serve speeds, court coverage, head-to-head comparisons, and granular match breakdowns — data that is meaningful both for fans and for performance analysis.</p>
+<hr>
+</section>
+<section id="tech-stack" class="level2">
+<h2 class="anchored" data-anchor-id="tech-stack">Tech Stack</h2>
+<ul>
+<li><strong>PostgreSQL</strong> — relational database storing all player, tournament, match, and stats data</li>
+<li><strong>R</strong> — data preparation and loading</li>
+<li><strong>R Shiny</strong> — interactive web interface for querying the database</li>
+<li><strong>shinyapps.io</strong> — live deployment platform</li>
+</ul>
+<hr>
+</section>
+<section id="database-schema" class="level2">
+<h2 class="anchored" data-anchor-id="database-schema">Database Schema</h2>
+<p>The database consists of four core relations:</p>
+<p><strong>Players</strong> — player_id, name, nationality, age, height, weight, handedness</p>
+<p><strong>Tournaments</strong> — tournament_id, name, location, surface (clay/grass/hard), type (250/500/1000/Grand Slam)</p>
+<p><strong>Matches</strong> — match_id, tournament_id, player1_id, player2_id, winner_id, date, round</p>
+<p><strong>Stats</strong> — stat_id, match_id, player_id, aces, double_faults, first_serve_pct, first_serve_won_pct, second_serve_won_pct, break_points_saved_pct, return_points_won_pct</p>
+<hr>
+</section>
+<section id="data-source" class="level2">
+<h2 class="anchored" data-anchor-id="data-source">Data Source</h2>
+<p>Data is sourced from <a href="https://www.tennisabstract.com">Tennis Abstract</a> and Jeff Sackmann’s open-source <a href="https://github.com/JeffSackmann/tennis_atp">tennis_atp GitHub repository</a>, which provides clean CSV files of ATP match data going back several decades.</p>
+<hr>
+</section>
+<section id="current-status" class="level2">
+<h2 class="anchored" data-anchor-id="current-status">Current Status</h2>
+<p>The database schema has been designed and deployed in PostgreSQL locally. A prototype Shiny application has been built and deployed demonstrating the query interface with sample player data. The next steps are loading real ATP match data from the Sackmann dataset and connecting the live database to the deployed application.</p>
+<hr>
+</section>
+<section id="live-app" class="level2">
+<h2 class="anchored" data-anchor-id="live-app">Live App</h2>
+<p><a href="https://prashanttiwari.shinyapps.io/tennis-app/">Click here to view the Tennis Statistics Shiny App</a></p>
+<hr>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

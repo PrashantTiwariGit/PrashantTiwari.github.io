@@ -1,0 +1,57 @@
+---
+title: "Assignment 1"
+---
+
+## Question 1: Database Applications
+
+Name and describe three applications that employ a database system to store and access persistent data.
+
+**Steam**
+
+Steam is an online platform that allows users to play games, interact through their digital marketplace for in-game purchases, and publish games (for developers). Data about these interactions and users are stored as records on Valve's DBMS — which appears to be a combination of PostgreSQL, in-house proprietary DBMSs, and third-party CDN providers for storage capacity. Users can have various attributes classifying them as developers, admins, employees, etc., each with different levels of functionality. Persistent data includes metadata about games available on the marketplace, user records, and transaction histories.
+
+**eLearning (UTD)**
+
+eLearning uses MSSQL, PostgreSQL, and MariaDB, with MongoDB also used for flexible content management. It stores records of users, class information, professors, quizzes, and enrollment records. Users interact with varying levels of functionality depending on their classification — professors have different tools available than students or admins, based on their attributes.
+
+**Twitter/X**
+
+Twitter/X stores user records, trending topics, and event data. The platform maintains persistent data across millions of users and interactions, tracking relationships, posts, and behavioral metadata to serve content and advertising.
+
+---
+
+## Question 2: Proposed Database Applications
+
+Propose three applications in domain projects.
+
+**1. Sports Science — Tennis Player Analytics**
+
+Tracking tennis players' average forehand speeds, court coverage at various points through matches across a season to identify trends, reaction times, and injury pattern indicators. The function would be to improve training methods for athletes, make adjustments to different competitors, and provide granular breakdowns of player metrics versus rivals. The interface could be a search tool with a dashboard to break down by players, matches, tournaments, and season. Something like this already exists in the form of TennisViz but the data is somewhat limited by tournament availability.
+
+**2. Agriculture Economics**
+
+Optimization of crop yield and performance for farmers to make informed planting and selling decisions. Records crop yields, allowing sorting by farm, region, and season. Allows for integration of real-time weather data and commodity prices, with a compare functionality across every level. Interface would be a dashboard with various tools and a granular search function.
+
+**3. Environmental Science — Air Quality Monitoring**
+
+Air quality monitoring across time, cross-referenced with data such as weather, traffic, and industrial activity. Would allow researchers and policymakers to identify patterns and causes of air quality degradation across regions and timeframes.
+
+---
+
+## Question 3: Social Media Database Tables
+
+Describe at least three tables used to store information in a social network system such as Twitter or Reddit.
+
+- **User Table** — account creation data, associated verification information such as phone numbers or emails, friends and subreddits/follows
+- **Subreddit/Community Table** — user counts, posts, upvotes and likes, community metadata
+- **Relationship/Metadata Table** — how different users or subreddits relate to each other, including trending, popular, and categorical associations
+
+---
+
+## Question 4: Data Retrieval vs. Data Mining
+
+*If data can be retrieved efficiently and effectively, why is data mining needed?*
+
+Retrieving data and mining data are not the same thing. Data retrieval is the process of fetching specific, known information from a database in response to a query. Data mining, by contrast, is the process of discovering previously unknown patterns or relationships within data — it can be thought of as a subcategory of data analysis that goes beyond simple retrieval.
+
+For example: a query tells you a player's serve speed dropped 8% in the third set. Data mining might reveal that across 200 matches, this player's injury risk increases 3x when their court coverage drops below a certain threshold in consecutive tournaments. The query answers a specific question; data mining surfaces insights that were never explicitly asked for.

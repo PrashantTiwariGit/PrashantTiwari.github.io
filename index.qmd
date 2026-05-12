@@ -1,11 +1,34 @@
 ---
-title: "prashanttiwari.github.io"
+title: "About Me"
 ---
 
-This is a Quarto website by Prashant Tiwari for EPPS 6354.
+:::::: columns
+::: {.column width="35%"}
+![](picture.jpg){style="border-radius: 12px;" width="100%"}
+:::
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+::: {.column width="5%"}
+:::
 
-```{r}
-1 + 1
-```
+::: {.column width="60%"}
+## Prashant Tiwari
+
+Hi, I'm Prashant Tiwari — a recent Master's graduate in Economics from UT Dallas with a background in data analytics, market analysis, and customer service. I've worked with organizations like WTC Dublin and Bridgevue Energy, and I'm passionate about the intersection of data, technology, and meaningful impact.
+
+At heart I'm a humanitarian — I believe the purpose of any work should be to serve people and communities first. That philosophy drives everything from how I approach data problems to how I engage with the world around me.
+
+Outside of work I'm an avid tennis player, a lifelong gamer, and a proud desi who loves keeping his culture alive and visible. I'm also deeply interested in AI development and integration, and what it means for the future of how we live and work.
+
+I'm currently based in the Dallas area and open to opportunities both locally and internationally.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Resume
+
+[📄 Download Resume](Prashant_Tiwari_Resume.pdf)
+
+<iframe src="Prashant_Tiwari_Resume.pdf" width="100%" height="800px" style="border: none;">
+
+</iframe>

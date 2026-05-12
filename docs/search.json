@@ -1,199 +1,73 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "prashanttiwari.github.io",
+    "objectID": "tennisproject.html",
+    "href": "tennisproject.html",
+    "title": "Tennis Statistics Database Project",
     "section": "",
-    "text": "This is a Quarto website by Prashant Tiwari for EPPS 6354.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "This project aims to build a granular database of detailed statistics for top 100 ATP tennis players, paired with an interactive Shiny interface for querying player and match data. The goal is to provide a more accessible and detailed alternative to existing platforms like TennisViz, which are either paywalled or limited in granularity."
   },
   {
-    "objectID": "assignment8.html",
-    "href": "assignment8.html",
-    "title": "Assignment 8: NBA Database Shiny App",
+    "objectID": "tennisproject.html#overview",
+    "href": "tennisproject.html#overview",
+    "title": "Tennis Statistics Database Project",
     "section": "",
-    "text": "This assignment involved building an NBA player database Shiny application following a multi-step workflow:\n\nImported the NBA database from SQL file using DB Browser for SQLite\nConnected the SQLite database to R Shiny\nBuilt an interactive app allowing users to browse active NBA players with photos using a slider to control the number of rows displayed\nDeployed the app to shinyapps.io"
+    "text": "This project aims to build a granular database of detailed statistics for top 100 ATP tennis players, paired with an interactive Shiny interface for querying player and match data. The goal is to provide a more accessible and detailed alternative to existing platforms like TennisViz, which are either paywalled or limited in granularity."
   },
   {
-    "objectID": "assignment8.html#overview",
-    "href": "assignment8.html#overview",
-    "title": "Assignment 8: NBA Database Shiny App",
-    "section": "",
-    "text": "This assignment involved building an NBA player database Shiny application following a multi-step workflow:\n\nImported the NBA database from SQL file using DB Browser for SQLite\nConnected the SQLite database to R Shiny\nBuilt an interactive app allowing users to browse active NBA players with photos using a slider to control the number of rows displayed\nDeployed the app to shinyapps.io"
+    "objectID": "tennisproject.html#motivation",
+    "href": "tennisproject.html#motivation",
+    "title": "Tennis Statistics Database Project",
+    "section": "Motivation",
+    "text": "Motivation\nAs an avid tennis player myself, I wanted to build a tool that goes beyond surface level statistics. The database is designed to capture things like average and maximum serve speeds, court coverage, head-to-head comparisons, and granular match breakdowns — data that is meaningful both for fans and for performance analysis."
   },
   {
-    "objectID": "assignment8.html#live-app",
-    "href": "assignment8.html#live-app",
-    "title": "Assignment 8: NBA Database Shiny App",
+    "objectID": "tennisproject.html#tech-stack",
+    "href": "tennisproject.html#tech-stack",
+    "title": "Tennis Statistics Database Project",
+    "section": "Tech Stack",
+    "text": "Tech Stack\n\nPostgreSQL — relational database storing all player, tournament, match, and stats data\nR — data preparation and loading\nR Shiny — interactive web interface for querying the database\nshinyapps.io — live deployment platform"
+  },
+  {
+    "objectID": "tennisproject.html#database-schema",
+    "href": "tennisproject.html#database-schema",
+    "title": "Tennis Statistics Database Project",
+    "section": "Database Schema",
+    "text": "Database Schema\nThe database consists of four core relations:\nPlayers — player_id, name, nationality, age, height, weight, handedness\nTournaments — tournament_id, name, location, surface (clay/grass/hard), type (250/500/1000/Grand Slam)\nMatches — match_id, tournament_id, player1_id, player2_id, winner_id, date, round\nStats — stat_id, match_id, player_id, aces, double_faults, first_serve_pct, first_serve_won_pct, second_serve_won_pct, break_points_saved_pct, return_points_won_pct"
+  },
+  {
+    "objectID": "tennisproject.html#data-source",
+    "href": "tennisproject.html#data-source",
+    "title": "Tennis Statistics Database Project",
+    "section": "Data Source",
+    "text": "Data Source\nData is sourced from Tennis Abstract and Jeff Sackmann’s open-source tennis_atp GitHub repository, which provides clean CSV files of ATP match data going back several decades."
+  },
+  {
+    "objectID": "tennisproject.html#current-status",
+    "href": "tennisproject.html#current-status",
+    "title": "Tennis Statistics Database Project",
+    "section": "Current Status",
+    "text": "Current Status\nThe database schema has been designed and deployed in PostgreSQL locally. A prototype Shiny application has been built and deployed demonstrating the query interface with sample player data. The next steps are loading real ATP match data from the Sackmann dataset and connecting the live database to the deployed application."
+  },
+  {
+    "objectID": "tennisproject.html#live-app",
+    "href": "tennisproject.html#live-app",
+    "title": "Tennis Statistics Database Project",
     "section": "Live App",
-    "text": "Live App\nClick here to view the NBA Database Shiny App"
-  },
-  {
-    "objectID": "assignment8.html#screenshot",
-    "href": "assignment8.html#screenshot",
-    "title": "Assignment 8: NBA Database Shiny App",
-    "section": "Screenshot",
-    "text": "Screenshot\n\n\n\nNBA Shiny App"
-  },
-  {
-    "objectID": "assignment6.html",
-    "href": "assignment6.html",
-    "title": "Assignment 6",
-    "section": "",
-    "text": "Reddit’s API serves all of its data in JSON format, accessible by adding .json to any Reddit URL (e.g., reddit.com/r/economics.json). The structure consists of nested key-value pairs where each object represents a data entity such as a post, comment, or user. Data is organized hierarchically — a subreddit response contains a data object, which contains a children array, with each child representing an individual post and its attributes like title, score, author, and URL. Reddit’s technology stack uses REST APIs with React.js on the frontend to parse and dynamically render this JSON data into the familiar Reddit interface users see.\n\n\n\nReddit also publishes subreddit content as XML-based RSS feeds, accessible by adding .rss to any subreddit URL (e.g., reddit.com/r/economics.rss). Each post is wrapped in item tags containing child elements like title, link, description, and pubDate. The structure is self-describing — each tag explicitly labels what the data represents. RSS feed readers and browsers parse this XML to display news and content updates. XML is used here because RSS is a long-established standard for content syndication that predates JSON’s rise in popularity.\n\n\n\nBoth formats represent the same Reddit data but in different ways. JSON is more compact, easier to parse in modern web applications, and maps directly to JavaScript objects. XML is more verbose but better suited for content syndication and is supported by a wider range of legacy feed readers and platforms."
-  },
-  {
-    "objectID": "assignment6.html#question-1-json-and-xml-data-representations",
-    "href": "assignment6.html#question-1-json-and-xml-data-representations",
-    "title": "Assignment 6",
-    "section": "",
-    "text": "Reddit’s API serves all of its data in JSON format, accessible by adding .json to any Reddit URL (e.g., reddit.com/r/economics.json). The structure consists of nested key-value pairs where each object represents a data entity such as a post, comment, or user. Data is organized hierarchically — a subreddit response contains a data object, which contains a children array, with each child representing an individual post and its attributes like title, score, author, and URL. Reddit’s technology stack uses REST APIs with React.js on the frontend to parse and dynamically render this JSON data into the familiar Reddit interface users see.\n\n\n\nReddit also publishes subreddit content as XML-based RSS feeds, accessible by adding .rss to any subreddit URL (e.g., reddit.com/r/economics.rss). Each post is wrapped in item tags containing child elements like title, link, description, and pubDate. The structure is self-describing — each tag explicitly labels what the data represents. RSS feed readers and browsers parse this XML to display news and content updates. XML is used here because RSS is a long-established standard for content syndication that predates JSON’s rise in popularity.\n\n\n\nBoth formats represent the same Reddit data but in different ways. JSON is more compact, easier to parse in modern web applications, and maps directly to JavaScript objects. XML is more verbose but better suited for content syndication and is supported by a wider range of legacy feed readers and platforms."
-  },
-  {
-    "objectID": "assignment6.html#question-2-sql-exercises",
-    "href": "assignment6.html#question-2-sql-exercises",
-    "title": "Assignment 6",
-    "section": "Question 2: SQL Exercises",
-    "text": "Question 2: SQL Exercises\n\nQuery i — Students with no advisor (using LEFT OUTER JOIN)\nSELECT student.ID\nFROM student LEFT OUTER JOIN advisor ON student.ID = advisor.s_ID\nWHERE advisor.i_ID IS NULL\n\n\nQuery ii — Instructors who teach every course in their department\nSELECT DISTINCT i.ID, i.name\nFROM instructor AS i\nWHERE NOT EXISTS (\n    SELECT course_id FROM course\n    WHERE dept_name = i.dept_name\n    AND NOT EXISTS (\n        SELECT course_id FROM teaches\n        WHERE teaches.ID = i.ID\n        AND teaches.course_id = course.course_id\n    )\n)\nORDER BY i.name"
-  },
-  {
-    "objectID": "assignment6.html#question-3-r-and-postgresql",
-    "href": "assignment6.html#question-3-r-and-postgresql",
-    "title": "Assignment 6",
-    "section": "Question 3: R and PostgreSQL",
-    "text": "Question 3: R and PostgreSQL\n\nSetup\nThe university database was imported into PostgreSQL using the large relations SQL file from the textbook website. The following R packages were used to connect and query the database: DBI, RPostgres, and odbc.\n\n\nResults\nlibrary(RPostgres)\nlibrary(DBI)\n\ncon &lt;- dbConnect(\n  RPostgres::Postgres(),\n  dbname   = \"university\",\n  host     = \"localhost\",\n  port     = 5432,\n  user     = \"postgres\",\n  password = \"yourpassword\"\n)\n\n# Query 1: All instructors\ninstructor_data &lt;- dbGetQuery(con, \"SELECT * FROM instructor\")\nhead(instructor_data)\n\n# Query 2: Comp. Sci. instructors with salary over 60,000\ncomp_sci &lt;- dbGetQuery(con,\n  \"SELECT * FROM instructor\n   WHERE dept_name = 'Comp. Sci.' AND salary &gt; 60000\")\n\n# Query 3: Students with more than 50 credits\nstudents &lt;- dbGetQuery(con,\n  \"SELECT * FROM student WHERE tot_cred &gt;= 50\")\n\ndbDisconnect(con)\n\n\nScreenshots\n\n\n\nInstructor Data\n\n\n\n\n\nComp Sci Instructors\n\n\n\n\n\nStudents with 50+ Credits"
-  },
-  {
-    "objectID": "assignment4.html",
-    "href": "assignment4.html",
-    "title": "Assignment 4",
-    "section": "",
-    "text": "A strong entity set is an entity that can be uniquely identified by its own attributes and exists independently in a database. A weak entity set, by contrast, cannot be uniquely identified on its own and depends on a strong entity — known as the identifying entity — for both its existence and identity.\nExample: Consider a university course database. A course such as EPPS 6354 is a strong entity — it exists independently and can be uniquely identified by its own course code. It encapsulates all information about the course including its name, credits, and department.\nA course section, however — such as EPPS 6354, Section 2, Spring 2026 — is a weak entity. “Section 2” alone has no meaning or identity without knowing which course it belongs to. It cannot exist in the database if the parent course EPPS 6354 does not exist. The section’s identity is therefore entirely dependent on the strong entity (the course) that it is associated with."
-  },
-  {
-    "objectID": "assignment4.html#question-1-weak-vs-strong-entity-sets",
-    "href": "assignment4.html#question-1-weak-vs-strong-entity-sets",
-    "title": "Assignment 4",
-    "section": "",
-    "text": "A strong entity set is an entity that can be uniquely identified by its own attributes and exists independently in a database. A weak entity set, by contrast, cannot be uniquely identified on its own and depends on a strong entity — known as the identifying entity — for both its existence and identity.\nExample: Consider a university course database. A course such as EPPS 6354 is a strong entity — it exists independently and can be uniquely identified by its own course code. It encapsulates all information about the course including its name, credits, and department.\nA course section, however — such as EPPS 6354, Section 2, Spring 2026 — is a weak entity. “Section 2” alone has no meaning or identity without knowing which course it belongs to. It cannot exist in the database if the parent course EPPS 6354 does not exist. The section’s identity is therefore entirely dependent on the strong entity (the course) that it is associated with."
-  },
-  {
-    "objectID": "assignment4.html#question-2-e-r-diagram-for-sports-team-scoring-statistics",
-    "href": "assignment4.html#question-2-e-r-diagram-for-sports-team-scoring-statistics",
-    "title": "Assignment 4",
-    "section": "Question 2: E-R Diagram for Sports Team Scoring Statistics",
-    "text": "Question 2: E-R Diagram for Sports Team Scoring Statistics\n\nPart A: Single Team\nThe E-R diagram tracks the scoring statistics of a single sports team and consists of the following entities and relationships:\nEntities:\n\nPlayer — represents each player on the team. Attributes include player_id (primary key), name, and age. The derived attribute season_score() is computed by summing the individual score values associated with the player across all matches via the played relationship.\nMatch — represents each match played by the team. Attributes include match_id (primary key), date, stadium, opponent, own_score, and opp_score.\n\nRelationship:\n\nPlayed — a many-to-many relationship connecting Player to Match, representing which players participated in which matches. It carries the attribute score, which records the individual player’s scoring contribution in that specific match.\n\nDerived Attribute:\n\nseason_score() on the Player entity is derived by summing all score values linked to that player through the played relationship across all matches in the season.\n\n\n\nPart B: Expanded to All Teams in the League\nTo expand the diagram to track all teams in the league, a Team entity is added:\nAdditional Entity:\n\nTeam — represents each team in the league. Attributes include team_id (primary key), team_name, and city. The derived attribute season_wins() is computed by counting all matches where own_score is greater than opp_score.\n\nAdditional Relationships:\n\nplays_for — a many-to-one relationship connecting Player to Team, indicating which team each player belongs to.\nplays_in — a many-to-many relationship connecting Team to Match, indicating which teams participated in each match.\n\nThis expansion allows the database to track statistics not just for one team but for every team and player across the entire league.\n!er diagram"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "assignment3.html",
-    "href": "assignment3.html",
-    "title": "Assignment 3",
-    "section": "",
-    "text": "Write SQL codes to get a list of:\ni. Student IDs, Instructors, and Departments\nSELECT \n    s.ID AS student_id,\n    s.name AS student_name,\n    i.name AS instructor_name,\n    s.dept_name AS department\nFROM student s\nJOIN takes t ON s.ID = t.ID\nJOIN teaches te ON t.course_id = te.course_id\n               AND t.sec_id = te.sec_id\n               AND t.semester = te.semester\n               AND t.year = te.year\nJOIN instructor i ON te.ID = i.ID\nORDER BY s.ID;"
-  },
-  {
-    "objectID": "assignment3.html#question-2",
-    "href": "assignment3.html#question-2",
-    "title": "Assignment 3",
-    "section": "",
-    "text": "Write SQL codes to get a list of:\ni. Student IDs, Instructors, and Departments\nSELECT \n    s.ID AS student_id,\n    s.name AS student_name,\n    i.name AS instructor_name,\n    s.dept_name AS department\nFROM student s\nJOIN takes t ON s.ID = t.ID\nJOIN teaches te ON t.course_id = te.course_id\n               AND t.sec_id = te.sec_id\n               AND t.semester = te.semester\n               AND t.year = te.year\nJOIN instructor i ON te.ID = i.ID\nORDER BY s.ID;"
-  },
-  {
-    "objectID": "assignment3.html#question-3",
-    "href": "assignment3.html#question-3",
-    "title": "Assignment 3",
-    "section": "Question 3",
-    "text": "Question 3\nWrite SQL codes to do the following queries:\ni. Find the ID and name of each student who has taken at least one Comp. Sci. course (no duplicates)\nSELECT DISTINCT s.ID, s.name\nFROM student s\nJOIN takes t ON s.ID = t.ID\nJOIN course c ON t.course_id = c.course_id\nWHERE c.dept_name = 'Comp. Sci.';\nii. Add grades to the list\nSELECT DISTINCT s.ID, s.name, t.grade\nFROM student s\nJOIN takes t ON s.ID = t.ID\nJOIN course c ON t.course_id = c.course_id\nWHERE c.dept_name = 'Comp. Sci.';\niii. Find students who have not taken any course offered before 2017\nSELECT s.ID, s.name\nFROM student s\nWHERE s.ID NOT IN (\n    SELECT t.ID\n    FROM takes t\n    WHERE t.year &lt; 2017\n);\niv. For each department, find the maximum salary of instructors\nSELECT dept_name, MAX(salary) AS max_salary\nFROM instructor\nGROUP BY dept_name;\nv. Find the lowest of the per-department maximum salaries\nSELECT MIN(max_salary) AS lowest_max_salary\nFROM (\n    SELECT dept_name, MAX(salary) AS max_salary\n    FROM instructor\n    GROUP BY dept_name\n) AS dept_max;\nvi. Add names to the list\nSELECT i.name, i.dept_name, i.salary\nFROM instructor i\nWHERE i.salary = (\n    SELECT MIN(max_salary)\n    FROM (\n        SELECT MAX(salary) AS max_salary\n        FROM instructor\n        GROUP BY dept_name\n    ) AS dept_max\n);"
-  },
-  {
-    "objectID": "assignment3.html#question-4",
-    "href": "assignment3.html#question-4",
-    "title": "Assignment 3",
-    "section": "Question 4",
-    "text": "Question 4\nFind instructors (with name and ID) who have never given an A grade\nSELECT i.ID, i.name\nFROM instructor i\nWHERE i.ID NOT IN (\n    SELECT te.ID\n    FROM teaches te\n    JOIN takes ta ON te.course_id = ta.course_id\n                 AND te.sec_id    = ta.sec_id\n                 AND te.semester  = ta.semester\n                 AND te.year      = ta.year\n    WHERE ta.grade = 'A'\n);"
-  },
-  {
-    "objectID": "assignment3.html#question-5",
-    "href": "assignment3.html#question-5",
-    "title": "Assignment 3",
-    "section": "Question 5",
-    "text": "Question 5\nFind the number of students in each section\nSELECT\n    course_id  AS courseid,\n    sec_id     AS secid,\n    year,\n    semester,\n    COUNT(ID)  AS num\nFROM takes\nGROUP BY course_id, sec_id, year, semester\nORDER BY course_id, sec_id, year, semester;"
-  },
-  {
-    "objectID": "assignment5.html",
-    "href": "assignment5.html",
-    "title": "Assignment 5",
-    "section": "",
-    "text": "When an E-R diagram is disconnected, the entities in question share no relationship and no data with each other. What one entity represents is entirely independent of the other, meaning the enterprise schema contains two or more completely separate subsystems that have no interaction or dependency.\n\n\n\nWhen an E-R diagram contains a cycle, every entity in the cycle is directly or indirectly dependent on every other entity within it, meaning they all share relationships and data with one another. This is generally a natural and desirable property of enterprise schemas, as it allows information to be derived through multiple relationship paths, reducing redundancy and making queries more efficient."
-  },
-  {
-    "objectID": "assignment5.html#question-1-e-r-diagram-as-a-graph",
-    "href": "assignment5.html#question-1-e-r-diagram-as-a-graph",
-    "title": "Assignment 5",
-    "section": "",
-    "text": "When an E-R diagram is disconnected, the entities in question share no relationship and no data with each other. What one entity represents is entirely independent of the other, meaning the enterprise schema contains two or more completely separate subsystems that have no interaction or dependency.\n\n\n\nWhen an E-R diagram contains a cycle, every entity in the cycle is directly or indirectly dependent on every other entity within it, meaning they all share relationships and data with one another. This is generally a natural and desirable property of enterprise schemas, as it allows information to be derived through multiple relationship paths, reducing redundancy and making queries more efficient."
-  },
-  {
-    "objectID": "assignment5.html#question-3-why-do-we-have-weak-entity-sets",
-    "href": "assignment5.html#question-3-why-do-we-have-weak-entity-sets",
-    "title": "Assignment 5",
-    "section": "Question 3: Why Do We Have Weak Entity Sets?",
-    "text": "Question 3: Why Do We Have Weak Entity Sets?\nAlthough weak entity sets could theoretically be converted to strong entity sets by simply adding unique identifiers, doing so would introduce unnecessary complexity into the schema. Weak entity sets derive their identity naturally from their relationship with a strong entity, meaning their attributes can be accessed and queried through the identifying entity without the overhead of managing redundant artificial keys across the database."
-  },
-  {
-    "objectID": "assignment5.html#question-4-sql-exercises",
-    "href": "assignment5.html#question-4-sql-exercises",
-    "title": "Assignment 5",
-    "section": "Question 4: SQL Exercises",
-    "text": "Question 4: SQL Exercises\n\nPart A: Employee Database Queries\nQuery i — Employees who live in the same city as their company\nSELECT e.ID, e.person_name\nFROM employee AS e, works AS w, company AS c\nWHERE e.city = c.city\nAND e.ID = w.ID\nAND w.company_name = c.company_name\nQuery ii — Employees who live on the same street and city as their manager\nSELECT e.ID, e.person_name\nFROM employee AS e, employee AS m, manages AS mg\nWHERE e.ID = mg.ID\nAND m.ID = mg.manager_id\nAND e.city = m.city\nAND e.street = m.street\nQuery iii — Employees who earn more than the average salary at their company\nSELECT e.ID, e.person_name\nFROM employee AS e, works AS w\nWHERE e.ID = w.ID\nAND w.salary &gt; (SELECT AVG(salary)\n                FROM works\n                WHERE company_name = w.company_name)\n\n\nPart B: What is Wrong with the Natural Join Query?\nThe issue with the query is the use of NATURAL JOIN across multiple tables. Since NATURAL JOIN automatically joins on all shared column names, it matches rows only where every shared column is identical across all four tables simultaneously. This becomes problematic because an instructor can teach multiple courses and sections — the unintended matching on shared columns like course_id and sec_id across tables will incorrectly filter out valid rows, producing an incomplete result."
-  },
-  {
-    "objectID": "assignment7.html",
-    "href": "assignment7.html",
-    "title": "Assignment 7: AI Lab - Shiny Applications",
-    "section": "",
-    "text": "The app connects to a local PostgreSQL university database and displays average instructor salaries by department, sorted from highest to lowest.\n\n\n\nAverage Instructor Salary by Department\n\n\n\n\n\nModified the SQL query to pull student count data from the student table instead of salary data from the instructor table.\n\n\n\nNumber of Students by Department"
-  },
-  {
-    "objectID": "assignment7.html#part-1-university-database-instructor-salaries",
-    "href": "assignment7.html#part-1-university-database-instructor-salaries",
-    "title": "Assignment 7: AI Lab - Shiny Applications",
-    "section": "",
-    "text": "The app connects to a local PostgreSQL university database and displays average instructor salaries by department, sorted from highest to lowest.\n\n\n\nAverage Instructor Salary by Department\n\n\n\n\n\nModified the SQL query to pull student count data from the student table instead of salary data from the instructor table.\n\n\n\nNumber of Students by Department"
-  },
-  {
-    "objectID": "assignment7.html#part-2-old-faithful-geyser-data-color-change",
-    "href": "assignment7.html#part-2-old-faithful-geyser-data-color-change",
-    "title": "Assignment 7: AI Lab - Shiny Applications",
-    "section": "Part 2: Old Faithful Geyser Data — Color Change",
-    "text": "Part 2: Old Faithful Geyser Data — Color Change\nModified the bar chart color from the default gray to mediumpurple.\n\n\n\nOld Faithful Histogram in Purple"
-  },
-  {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Assignments",
-    "section": "",
-    "text": "Download Assignment 1"
+    "text": "Live App\nClick here to view the Tennis Statistics Shiny App"
   },
   {
     "objectID": "assignments.html#assignment-1",
     "href": "assignments.html#assignment-1",
     "title": "Assignments",
-    "section": "",
-    "text": "Download Assignment 1"
+    "section": "Assignment 1",
+    "text": "Assignment 1\nView Assignment 1"
   },
   {
     "objectID": "assignments.html#assignment-2",
     "href": "assignments.html#assignment-2",
     "title": "Assignments",
     "section": "Assignment 2",
-    "text": "Assignment 2\nDownload Assignment 2"
+    "text": "Assignment 2\nView Assignment 2"
   },
   {
     "objectID": "assignments.html#assignment-3",
@@ -236,5 +110,264 @@
     "title": "Assignments",
     "section": "Assignment 8",
     "text": "Assignment 8\nView Assignment 8"
+  },
+  {
+    "objectID": "assignment7.html",
+    "href": "assignment7.html",
+    "title": "Assignment 7: AI Lab - Shiny Applications",
+    "section": "",
+    "text": "The app connects to a local PostgreSQL university database and displays average instructor salaries by department, sorted from highest to lowest.\n\n\n\nAverage Instructor Salary by Department\n\n\n\n\n\nModified the SQL query to pull student count data from the student table instead of salary data from the instructor table.\n\n\n\nNumber of Students by Department"
+  },
+  {
+    "objectID": "assignment7.html#part-1-university-database-instructor-salaries",
+    "href": "assignment7.html#part-1-university-database-instructor-salaries",
+    "title": "Assignment 7: AI Lab - Shiny Applications",
+    "section": "",
+    "text": "The app connects to a local PostgreSQL university database and displays average instructor salaries by department, sorted from highest to lowest.\n\n\n\nAverage Instructor Salary by Department\n\n\n\n\n\nModified the SQL query to pull student count data from the student table instead of salary data from the instructor table.\n\n\n\nNumber of Students by Department"
+  },
+  {
+    "objectID": "assignment7.html#part-2-old-faithful-geyser-data-color-change",
+    "href": "assignment7.html#part-2-old-faithful-geyser-data-color-change",
+    "title": "Assignment 7: AI Lab - Shiny Applications",
+    "section": "Part 2: Old Faithful Geyser Data — Color Change",
+    "text": "Part 2: Old Faithful Geyser Data — Color Change\nModified the bar chart color from the default gray to mediumpurple.\n\n\n\nOld Faithful Histogram in Purple"
+  },
+  {
+    "objectID": "assignment5.html",
+    "href": "assignment5.html",
+    "title": "Assignment 5",
+    "section": "",
+    "text": "When an E-R diagram is disconnected, the entities in question share no relationship and no data with each other. What one entity represents is entirely independent of the other, meaning the enterprise schema contains two or more completely separate subsystems that have no interaction or dependency.\n\n\n\nWhen an E-R diagram contains a cycle, every entity in the cycle is directly or indirectly dependent on every other entity within it, meaning they all share relationships and data with one another. This is generally a natural and desirable property of enterprise schemas, as it allows information to be derived through multiple relationship paths, reducing redundancy and making queries more efficient."
+  },
+  {
+    "objectID": "assignment5.html#question-1-e-r-diagram-as-a-graph",
+    "href": "assignment5.html#question-1-e-r-diagram-as-a-graph",
+    "title": "Assignment 5",
+    "section": "",
+    "text": "When an E-R diagram is disconnected, the entities in question share no relationship and no data with each other. What one entity represents is entirely independent of the other, meaning the enterprise schema contains two or more completely separate subsystems that have no interaction or dependency.\n\n\n\nWhen an E-R diagram contains a cycle, every entity in the cycle is directly or indirectly dependent on every other entity within it, meaning they all share relationships and data with one another. This is generally a natural and desirable property of enterprise schemas, as it allows information to be derived through multiple relationship paths, reducing redundancy and making queries more efficient."
+  },
+  {
+    "objectID": "assignment5.html#question-3-why-do-we-have-weak-entity-sets",
+    "href": "assignment5.html#question-3-why-do-we-have-weak-entity-sets",
+    "title": "Assignment 5",
+    "section": "Question 3: Why Do We Have Weak Entity Sets?",
+    "text": "Question 3: Why Do We Have Weak Entity Sets?\nAlthough weak entity sets could theoretically be converted to strong entity sets by simply adding unique identifiers, doing so would introduce unnecessary complexity into the schema. Weak entity sets derive their identity naturally from their relationship with a strong entity, meaning their attributes can be accessed and queried through the identifying entity without the overhead of managing redundant artificial keys across the database."
+  },
+  {
+    "objectID": "assignment5.html#question-4-sql-exercises",
+    "href": "assignment5.html#question-4-sql-exercises",
+    "title": "Assignment 5",
+    "section": "Question 4: SQL Exercises",
+    "text": "Question 4: SQL Exercises\n\nPart A: Employee Database Queries\nQuery i — Employees who live in the same city as their company\nSELECT e.ID, e.person_name\nFROM employee AS e, works AS w, company AS c\nWHERE e.city = c.city\nAND e.ID = w.ID\nAND w.company_name = c.company_name\nQuery ii — Employees who live on the same street and city as their manager\nSELECT e.ID, e.person_name\nFROM employee AS e, employee AS m, manages AS mg\nWHERE e.ID = mg.ID\nAND m.ID = mg.manager_id\nAND e.city = m.city\nAND e.street = m.street\nQuery iii — Employees who earn more than the average salary at their company\nSELECT e.ID, e.person_name\nFROM employee AS e, works AS w\nWHERE e.ID = w.ID\nAND w.salary &gt; (SELECT AVG(salary)\n                FROM works\n                WHERE company_name = w.company_name)\n\n\nPart B: What is Wrong with the Natural Join Query?\nThe issue with the query is the use of NATURAL JOIN across multiple tables. Since NATURAL JOIN automatically joins on all shared column names, it matches rows only where every shared column is identical across all four tables simultaneously. This becomes problematic because an instructor can teach multiple courses and sections — the unintended matching on shared columns like course_id and sec_id across tables will incorrectly filter out valid rows, producing an incomplete result."
+  },
+  {
+    "objectID": "assignment3.html",
+    "href": "assignment3.html",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Write SQL codes to get a list of:\ni. Student IDs, Instructors, and Departments\nSELECT \n    s.ID AS student_id,\n    s.name AS student_name,\n    i.name AS instructor_name,\n    s.dept_name AS department\nFROM student s\nJOIN takes t ON s.ID = t.ID\nJOIN teaches te ON t.course_id = te.course_id\n               AND t.sec_id = te.sec_id\n               AND t.semester = te.semester\n               AND t.year = te.year\nJOIN instructor i ON te.ID = i.ID\nORDER BY s.ID;"
+  },
+  {
+    "objectID": "assignment3.html#question-2",
+    "href": "assignment3.html#question-2",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Write SQL codes to get a list of:\ni. Student IDs, Instructors, and Departments\nSELECT \n    s.ID AS student_id,\n    s.name AS student_name,\n    i.name AS instructor_name,\n    s.dept_name AS department\nFROM student s\nJOIN takes t ON s.ID = t.ID\nJOIN teaches te ON t.course_id = te.course_id\n               AND t.sec_id = te.sec_id\n               AND t.semester = te.semester\n               AND t.year = te.year\nJOIN instructor i ON te.ID = i.ID\nORDER BY s.ID;"
+  },
+  {
+    "objectID": "assignment3.html#question-3",
+    "href": "assignment3.html#question-3",
+    "title": "Assignment 3",
+    "section": "Question 3",
+    "text": "Question 3\nWrite SQL codes to do the following queries:\ni. Find the ID and name of each student who has taken at least one Comp. Sci. course (no duplicates)\nSELECT DISTINCT s.ID, s.name\nFROM student s\nJOIN takes t ON s.ID = t.ID\nJOIN course c ON t.course_id = c.course_id\nWHERE c.dept_name = 'Comp. Sci.';\nii. Add grades to the list\nSELECT DISTINCT s.ID, s.name, t.grade\nFROM student s\nJOIN takes t ON s.ID = t.ID\nJOIN course c ON t.course_id = c.course_id\nWHERE c.dept_name = 'Comp. Sci.';\niii. Find students who have not taken any course offered before 2017\nSELECT s.ID, s.name\nFROM student s\nWHERE s.ID NOT IN (\n    SELECT t.ID\n    FROM takes t\n    WHERE t.year &lt; 2017\n);\niv. For each department, find the maximum salary of instructors\nSELECT dept_name, MAX(salary) AS max_salary\nFROM instructor\nGROUP BY dept_name;\nv. Find the lowest of the per-department maximum salaries\nSELECT MIN(max_salary) AS lowest_max_salary\nFROM (\n    SELECT dept_name, MAX(salary) AS max_salary\n    FROM instructor\n    GROUP BY dept_name\n) AS dept_max;\nvi. Add names to the list\nSELECT i.name, i.dept_name, i.salary\nFROM instructor i\nWHERE i.salary = (\n    SELECT MIN(max_salary)\n    FROM (\n        SELECT MAX(salary) AS max_salary\n        FROM instructor\n        GROUP BY dept_name\n    ) AS dept_max\n);"
+  },
+  {
+    "objectID": "assignment3.html#question-4",
+    "href": "assignment3.html#question-4",
+    "title": "Assignment 3",
+    "section": "Question 4",
+    "text": "Question 4\nFind instructors (with name and ID) who have never given an A grade\nSELECT i.ID, i.name\nFROM instructor i\nWHERE i.ID NOT IN (\n    SELECT te.ID\n    FROM teaches te\n    JOIN takes ta ON te.course_id = ta.course_id\n                 AND te.sec_id    = ta.sec_id\n                 AND te.semester  = ta.semester\n                 AND te.year      = ta.year\n    WHERE ta.grade = 'A'\n);"
+  },
+  {
+    "objectID": "assignment3.html#question-5",
+    "href": "assignment3.html#question-5",
+    "title": "Assignment 3",
+    "section": "Question 5",
+    "text": "Question 5\nFind the number of students in each section\nSELECT\n    course_id  AS courseid,\n    sec_id     AS secid,\n    year,\n    semester,\n    COUNT(ID)  AS num\nFROM takes\nGROUP BY course_id, sec_id, year, semester\nORDER BY course_id, sec_id, year, semester;"
+  },
+  {
+    "objectID": "assignment1.html",
+    "href": "assignment1.html",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Name and describe three applications that employ a database system to store and access persistent data.\nSteam\nSteam is an online platform that allows users to play games, interact through their digital marketplace for in-game purchases, and publish games (for developers). Data about these interactions and users are stored as records on Valve’s DBMS — which appears to be a combination of PostgreSQL, in-house proprietary DBMSs, and third-party CDN providers for storage capacity. Users can have various attributes classifying them as developers, admins, employees, etc., each with different levels of functionality. Persistent data includes metadata about games available on the marketplace, user records, and transaction histories.\neLearning (UTD)\neLearning uses MSSQL, PostgreSQL, and MariaDB, with MongoDB also used for flexible content management. It stores records of users, class information, professors, quizzes, and enrollment records. Users interact with varying levels of functionality depending on their classification — professors have different tools available than students or admins, based on their attributes.\nTwitter/X\nTwitter/X stores user records, trending topics, and event data. The platform maintains persistent data across millions of users and interactions, tracking relationships, posts, and behavioral metadata to serve content and advertising."
+  },
+  {
+    "objectID": "assignment1.html#question-1-database-applications",
+    "href": "assignment1.html#question-1-database-applications",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Name and describe three applications that employ a database system to store and access persistent data.\nSteam\nSteam is an online platform that allows users to play games, interact through their digital marketplace for in-game purchases, and publish games (for developers). Data about these interactions and users are stored as records on Valve’s DBMS — which appears to be a combination of PostgreSQL, in-house proprietary DBMSs, and third-party CDN providers for storage capacity. Users can have various attributes classifying them as developers, admins, employees, etc., each with different levels of functionality. Persistent data includes metadata about games available on the marketplace, user records, and transaction histories.\neLearning (UTD)\neLearning uses MSSQL, PostgreSQL, and MariaDB, with MongoDB also used for flexible content management. It stores records of users, class information, professors, quizzes, and enrollment records. Users interact with varying levels of functionality depending on their classification — professors have different tools available than students or admins, based on their attributes.\nTwitter/X\nTwitter/X stores user records, trending topics, and event data. The platform maintains persistent data across millions of users and interactions, tracking relationships, posts, and behavioral metadata to serve content and advertising."
+  },
+  {
+    "objectID": "assignment1.html#question-2-proposed-database-applications",
+    "href": "assignment1.html#question-2-proposed-database-applications",
+    "title": "Assignment 1",
+    "section": "Question 2: Proposed Database Applications",
+    "text": "Question 2: Proposed Database Applications\nPropose three applications in domain projects.\n1. Sports Science — Tennis Player Analytics\nTracking tennis players’ average forehand speeds, court coverage at various points through matches across a season to identify trends, reaction times, and injury pattern indicators. The function would be to improve training methods for athletes, make adjustments to different competitors, and provide granular breakdowns of player metrics versus rivals. The interface could be a search tool with a dashboard to break down by players, matches, tournaments, and season. Something like this already exists in the form of TennisViz but the data is somewhat limited by tournament availability.\n2. Agriculture Economics\nOptimization of crop yield and performance for farmers to make informed planting and selling decisions. Records crop yields, allowing sorting by farm, region, and season. Allows for integration of real-time weather data and commodity prices, with a compare functionality across every level. Interface would be a dashboard with various tools and a granular search function.\n3. Environmental Science — Air Quality Monitoring\nAir quality monitoring across time, cross-referenced with data such as weather, traffic, and industrial activity. Would allow researchers and policymakers to identify patterns and causes of air quality degradation across regions and timeframes."
+  },
+  {
+    "objectID": "assignment1.html#question-3-social-media-database-tables",
+    "href": "assignment1.html#question-3-social-media-database-tables",
+    "title": "Assignment 1",
+    "section": "Question 3: Social Media Database Tables",
+    "text": "Question 3: Social Media Database Tables\nDescribe at least three tables used to store information in a social network system such as Twitter or Reddit.\n\nUser Table — account creation data, associated verification information such as phone numbers or emails, friends and subreddits/follows\nSubreddit/Community Table — user counts, posts, upvotes and likes, community metadata\nRelationship/Metadata Table — how different users or subreddits relate to each other, including trending, popular, and categorical associations"
+  },
+  {
+    "objectID": "assignment1.html#question-4-data-retrieval-vs.-data-mining",
+    "href": "assignment1.html#question-4-data-retrieval-vs.-data-mining",
+    "title": "Assignment 1",
+    "section": "Question 4: Data Retrieval vs. Data Mining",
+    "text": "Question 4: Data Retrieval vs. Data Mining\nIf data can be retrieved efficiently and effectively, why is data mining needed?\nRetrieving data and mining data are not the same thing. Data retrieval is the process of fetching specific, known information from a database in response to a query. Data mining, by contrast, is the process of discovering previously unknown patterns or relationships within data — it can be thought of as a subcategory of data analysis that goes beyond simple retrieval.\nFor example: a query tells you a player’s serve speed dropped 8% in the third set. Data mining might reveal that across 200 matches, this player’s injury risk increases 3x when their court coverage drops below a certain threshold in consecutive tournaments. The query answers a specific question; data mining surfaces insights that were never explicitly asked for."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Hi, I’m Prashant Tiwari — a recent Master’s graduate in Economics from UT Dallas with a background in data analytics, market analysis, and customer service. I’ve worked with organizations like WTC Dublin and Bridgevue Energy, and I’m passionate about the intersection of data, technology, and meaningful impact.\nAt heart I’m a humanitarian — I believe the purpose of any work should be to serve people and communities first. That philosophy drives everything from how I approach data problems to how I engage with the world around me.\nOutside of work I’m an avid tennis player, a lifelong gamer, and a proud desi who loves keeping his culture alive and visible. I’m also deeply interested in AI development and integration, and what it means for the future of how we live and work.\nI’m currently based in the Dallas area and open to opportunities both locally and internationally."
+  },
+  {
+    "objectID": "about.html#prashant-tiwari",
+    "href": "about.html#prashant-tiwari",
+    "title": "About Me",
+    "section": "",
+    "text": "Hi, I’m Prashant Tiwari — a recent Master’s graduate in Economics from UT Dallas with a background in data analytics, market analysis, and customer service. I’ve worked with organizations like WTC Dublin and Bridgevue Energy, and I’m passionate about the intersection of data, technology, and meaningful impact.\nAt heart I’m a humanitarian — I believe the purpose of any work should be to serve people and communities first. That philosophy drives everything from how I approach data problems to how I engage with the world around me.\nOutside of work I’m an avid tennis player, a lifelong gamer, and a proud desi who loves keeping his culture alive and visible. I’m also deeply interested in AI development and integration, and what it means for the future of how we live and work.\nI’m currently based in the Dallas area and open to opportunities both locally and internationally."
+  },
+  {
+    "objectID": "about.html#resume",
+    "href": "about.html#resume",
+    "title": "About Me",
+    "section": "Resume",
+    "text": "Resume\n📄 Download Resume"
+  },
+  {
+    "objectID": "assignment2.html",
+    "href": "assignment2.html",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "Relation Schema\nA relation schema is the blueprint of a relation. It describes the name of the relation and its associated attributes. For example, in a university database, the Student relation schema could look like:\nstudent(ID, name, dept_name, tot_cred)\nThis defines the structure — the name of the relation and what attributes it contains — but does not contain any actual data.\nRelation\nA relation itself is a logical entity that encompasses the actual contents of the table. For example, the Student relation would contain all students and their associated attributes. It is the full table of data that conforms to the schema.\nRelation Instance\nA relation instance is a snapshot of the actual relation at a specific point in time. As the relation constantly changes through updates and insertions, the instance shows what the relation looked like at a particular moment.\nFor example, for the UTD Instructors table:\n\nRelation: Instructor\nSchema: instructor(ID, name, dept_name, salary)\nInstance: The list of all instructors and their associated attributes at the exact moment the snapshot was taken"
+  },
+  {
+    "objectID": "assignment2.html#question-1-relation-schema-relation-and-instance",
+    "href": "assignment2.html#question-1-relation-schema-relation-and-instance",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "Relation Schema\nA relation schema is the blueprint of a relation. It describes the name of the relation and its associated attributes. For example, in a university database, the Student relation schema could look like:\nstudent(ID, name, dept_name, tot_cred)\nThis defines the structure — the name of the relation and what attributes it contains — but does not contain any actual data.\nRelation\nA relation itself is a logical entity that encompasses the actual contents of the table. For example, the Student relation would contain all students and their associated attributes. It is the full table of data that conforms to the schema.\nRelation Instance\nA relation instance is a snapshot of the actual relation at a specific point in time. As the relation constantly changes through updates and insertions, the instance shows what the relation looked like at a particular moment.\nFor example, for the UTD Instructors table:\n\nRelation: Instructor\nSchema: instructor(ID, name, dept_name, salary)\nInstance: The list of all instructors and their associated attributes at the exact moment the snapshot was taken"
+  },
+  {
+    "objectID": "assignment2.html#question-4-how-ai-and-llms-can-assist-in-database-management",
+    "href": "assignment2.html#question-4-how-ai-and-llms-can-assist-in-database-management",
+    "title": "Assignment 2",
+    "section": "Question 4: How AI and LLMs Can Assist in Database Management",
+    "text": "Question 4: How AI and LLMs Can Assist in Database Management\nDescribe two ways artificial intelligence or LLMs can assist in managing or querying a database.\n1. Natural Language Querying\nLLMs can allow users to interact with databases using plain English rather than formal query syntax. Instead of writing SQL, a user can simply ask “show me all students enrolled in more than 15 credit hours this semester” and the LLM translates this into a valid query. This significantly reduces the barrier to data access and allows people without technical knowledge of querying languages to work with data effectively.\n2. Anomaly Detection and Pattern Recognition\nAI can perform anomaly detection at a scale and speed that humans cannot match. This enables early detection of fraud, data entry errors, and unusual patterns across large datasets. Beyond anomaly detection, AI can identify, consolidate, and present relevant trends in data that would be difficult to surface through traditional querying alone — turning raw data into actionable insight."
+  },
+  {
+    "objectID": "assignment4.html",
+    "href": "assignment4.html",
+    "title": "Assignment 4",
+    "section": "",
+    "text": "A strong entity set is an entity that can be uniquely identified by its own attributes and exists independently in a database. A weak entity set, by contrast, cannot be uniquely identified on its own and depends on a strong entity — known as the identifying entity — for both its existence and identity.\nExample: Consider a university course database. A course such as EPPS 6354 is a strong entity — it exists independently and can be uniquely identified by its own course code. It encapsulates all information about the course including its name, credits, and department.\nA course section, however — such as EPPS 6354, Section 2, Spring 2026 — is a weak entity. “Section 2” alone has no meaning or identity without knowing which course it belongs to. It cannot exist in the database if the parent course EPPS 6354 does not exist. The section’s identity is therefore entirely dependent on the strong entity (the course) that it is associated with."
+  },
+  {
+    "objectID": "assignment4.html#question-1-weak-vs-strong-entity-sets",
+    "href": "assignment4.html#question-1-weak-vs-strong-entity-sets",
+    "title": "Assignment 4",
+    "section": "",
+    "text": "A strong entity set is an entity that can be uniquely identified by its own attributes and exists independently in a database. A weak entity set, by contrast, cannot be uniquely identified on its own and depends on a strong entity — known as the identifying entity — for both its existence and identity.\nExample: Consider a university course database. A course such as EPPS 6354 is a strong entity — it exists independently and can be uniquely identified by its own course code. It encapsulates all information about the course including its name, credits, and department.\nA course section, however — such as EPPS 6354, Section 2, Spring 2026 — is a weak entity. “Section 2” alone has no meaning or identity without knowing which course it belongs to. It cannot exist in the database if the parent course EPPS 6354 does not exist. The section’s identity is therefore entirely dependent on the strong entity (the course) that it is associated with."
+  },
+  {
+    "objectID": "assignment4.html#question-2-e-r-diagram-for-sports-team-scoring-statistics",
+    "href": "assignment4.html#question-2-e-r-diagram-for-sports-team-scoring-statistics",
+    "title": "Assignment 4",
+    "section": "Question 2: E-R Diagram for Sports Team Scoring Statistics",
+    "text": "Question 2: E-R Diagram for Sports Team Scoring Statistics\n\nPart A: Single Team\nThe E-R diagram tracks the scoring statistics of a single sports team and consists of the following entities and relationships:\nEntities:\n\nPlayer — represents each player on the team. Attributes include player_id (primary key), name, and age. The derived attribute season_score() is computed by summing the individual score values associated with the player across all matches via the played relationship.\nMatch — represents each match played by the team. Attributes include match_id (primary key), date, stadium, opponent, own_score, and opp_score.\n\nRelationship:\n\nPlayed — a many-to-many relationship connecting Player to Match, representing which players participated in which matches. It carries the attribute score, which records the individual player’s scoring contribution in that specific match.\n\nDerived Attribute:\n\nseason_score() on the Player entity is derived by summing all score values linked to that player through the played relationship across all matches in the season.\n\n\n\nPart B: Expanded to All Teams in the League\nTo expand the diagram to track all teams in the league, a Team entity is added:\nAdditional Entity:\n\nTeam — represents each team in the league. Attributes include team_id (primary key), team_name, and city. The derived attribute season_wins() is computed by counting all matches where own_score is greater than opp_score.\n\nAdditional Relationships:\n\nplays_for — a many-to-one relationship connecting Player to Team, indicating which team each player belongs to.\nplays_in — a many-to-many relationship connecting Team to Match, indicating which teams participated in each match.\n\nThis expansion allows the database to track statistics not just for one team but for every team and player across the entire league.\n!er diagram"
+  },
+  {
+    "objectID": "assignment6.html",
+    "href": "assignment6.html",
+    "title": "Assignment 6",
+    "section": "",
+    "text": "Reddit’s API serves all of its data in JSON format, accessible by adding .json to any Reddit URL (e.g., reddit.com/r/economics.json). The structure consists of nested key-value pairs where each object represents a data entity such as a post, comment, or user. Data is organized hierarchically — a subreddit response contains a data object, which contains a children array, with each child representing an individual post and its attributes like title, score, author, and URL. Reddit’s technology stack uses REST APIs with React.js on the frontend to parse and dynamically render this JSON data into the familiar Reddit interface users see.\n\n\n\nReddit also publishes subreddit content as XML-based RSS feeds, accessible by adding .rss to any subreddit URL (e.g., reddit.com/r/economics.rss). Each post is wrapped in item tags containing child elements like title, link, description, and pubDate. The structure is self-describing — each tag explicitly labels what the data represents. RSS feed readers and browsers parse this XML to display news and content updates. XML is used here because RSS is a long-established standard for content syndication that predates JSON’s rise in popularity.\n\n\n\nBoth formats represent the same Reddit data but in different ways. JSON is more compact, easier to parse in modern web applications, and maps directly to JavaScript objects. XML is more verbose but better suited for content syndication and is supported by a wider range of legacy feed readers and platforms."
+  },
+  {
+    "objectID": "assignment6.html#question-1-json-and-xml-data-representations",
+    "href": "assignment6.html#question-1-json-and-xml-data-representations",
+    "title": "Assignment 6",
+    "section": "",
+    "text": "Reddit’s API serves all of its data in JSON format, accessible by adding .json to any Reddit URL (e.g., reddit.com/r/economics.json). The structure consists of nested key-value pairs where each object represents a data entity such as a post, comment, or user. Data is organized hierarchically — a subreddit response contains a data object, which contains a children array, with each child representing an individual post and its attributes like title, score, author, and URL. Reddit’s technology stack uses REST APIs with React.js on the frontend to parse and dynamically render this JSON data into the familiar Reddit interface users see.\n\n\n\nReddit also publishes subreddit content as XML-based RSS feeds, accessible by adding .rss to any subreddit URL (e.g., reddit.com/r/economics.rss). Each post is wrapped in item tags containing child elements like title, link, description, and pubDate. The structure is self-describing — each tag explicitly labels what the data represents. RSS feed readers and browsers parse this XML to display news and content updates. XML is used here because RSS is a long-established standard for content syndication that predates JSON’s rise in popularity.\n\n\n\nBoth formats represent the same Reddit data but in different ways. JSON is more compact, easier to parse in modern web applications, and maps directly to JavaScript objects. XML is more verbose but better suited for content syndication and is supported by a wider range of legacy feed readers and platforms."
+  },
+  {
+    "objectID": "assignment6.html#question-2-sql-exercises",
+    "href": "assignment6.html#question-2-sql-exercises",
+    "title": "Assignment 6",
+    "section": "Question 2: SQL Exercises",
+    "text": "Question 2: SQL Exercises\n\nQuery i — Students with no advisor (using LEFT OUTER JOIN)\nSELECT student.ID\nFROM student LEFT OUTER JOIN advisor ON student.ID = advisor.s_ID\nWHERE advisor.i_ID IS NULL\n\n\nQuery ii — Instructors who teach every course in their department\nSELECT DISTINCT i.ID, i.name\nFROM instructor AS i\nWHERE NOT EXISTS (\n    SELECT course_id FROM course\n    WHERE dept_name = i.dept_name\n    AND NOT EXISTS (\n        SELECT course_id FROM teaches\n        WHERE teaches.ID = i.ID\n        AND teaches.course_id = course.course_id\n    )\n)\nORDER BY i.name"
+  },
+  {
+    "objectID": "assignment6.html#question-3-r-and-postgresql",
+    "href": "assignment6.html#question-3-r-and-postgresql",
+    "title": "Assignment 6",
+    "section": "Question 3: R and PostgreSQL",
+    "text": "Question 3: R and PostgreSQL\n\nSetup\nThe university database was imported into PostgreSQL using the large relations SQL file from the textbook website. The following R packages were used to connect and query the database: DBI, RPostgres, and odbc.\n\n\nResults\nlibrary(RPostgres)\nlibrary(DBI)\n\ncon &lt;- dbConnect(\n  RPostgres::Postgres(),\n  dbname   = \"university\",\n  host     = \"localhost\",\n  port     = 5432,\n  user     = \"postgres\",\n  password = \"yourpassword\"\n)\n\n# Query 1: All instructors\ninstructor_data &lt;- dbGetQuery(con, \"SELECT * FROM instructor\")\nhead(instructor_data)\n\n# Query 2: Comp. Sci. instructors with salary over 60,000\ncomp_sci &lt;- dbGetQuery(con,\n  \"SELECT * FROM instructor\n   WHERE dept_name = 'Comp. Sci.' AND salary &gt; 60000\")\n\n# Query 3: Students with more than 50 credits\nstudents &lt;- dbGetQuery(con,\n  \"SELECT * FROM student WHERE tot_cred &gt;= 50\")\n\ndbDisconnect(con)\n\n\nScreenshots\n\n\n\nInstructor Data\n\n\n\n\n\nComp Sci Instructors\n\n\n\n\n\nStudents with 50+ Credits"
+  },
+  {
+    "objectID": "assignment8.html",
+    "href": "assignment8.html",
+    "title": "Assignment 8: NBA Database Shiny App",
+    "section": "",
+    "text": "This assignment involved building an NBA player database Shiny application following a multi-step workflow:\n\nImported the NBA database from SQL file using DB Browser for SQLite\nConnected the SQLite database to R Shiny\nBuilt an interactive app allowing users to browse active NBA players with photos using a slider to control the number of rows displayed\nDeployed the app to shinyapps.io"
+  },
+  {
+    "objectID": "assignment8.html#overview",
+    "href": "assignment8.html#overview",
+    "title": "Assignment 8: NBA Database Shiny App",
+    "section": "",
+    "text": "This assignment involved building an NBA player database Shiny application following a multi-step workflow:\n\nImported the NBA database from SQL file using DB Browser for SQLite\nConnected the SQLite database to R Shiny\nBuilt an interactive app allowing users to browse active NBA players with photos using a slider to control the number of rows displayed\nDeployed the app to shinyapps.io"
+  },
+  {
+    "objectID": "assignment8.html#live-app",
+    "href": "assignment8.html#live-app",
+    "title": "Assignment 8: NBA Database Shiny App",
+    "section": "Live App",
+    "text": "Live App\nClick here to view the NBA Database Shiny App"
+  },
+  {
+    "objectID": "assignment8.html#screenshot",
+    "href": "assignment8.html#screenshot",
+    "title": "Assignment 8: NBA Database Shiny App",
+    "section": "Screenshot",
+    "text": "Screenshot\n\n\n\nNBA Shiny App"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Hi, I’m Prashant Tiwari — a recent Master’s graduate in Economics from UT Dallas with a background in data analytics, market analysis, and customer service. I’ve worked with organizations like WTC Dublin and Bridgevue Energy, and I’m passionate about the intersection of data, technology, and meaningful impact.\nAt heart I’m a humanitarian — I believe the purpose of any work should be to serve people and communities first. That philosophy drives everything from how I approach data problems to how I engage with the world around me.\nOutside of work I’m an avid tennis player, a lifelong gamer, and a proud desi who loves keeping his culture alive and visible. I’m also deeply interested in AI development and integration, and what it means for the future of how we live and work.\nI’m currently based in the Dallas area and open to opportunities both locally and internationally."
+  },
+  {
+    "objectID": "index.html#prashant-tiwari",
+    "href": "index.html#prashant-tiwari",
+    "title": "About Me",
+    "section": "",
+    "text": "Hi, I’m Prashant Tiwari — a recent Master’s graduate in Economics from UT Dallas with a background in data analytics, market analysis, and customer service. I’ve worked with organizations like WTC Dublin and Bridgevue Energy, and I’m passionate about the intersection of data, technology, and meaningful impact.\nAt heart I’m a humanitarian — I believe the purpose of any work should be to serve people and communities first. That philosophy drives everything from how I approach data problems to how I engage with the world around me.\nOutside of work I’m an avid tennis player, a lifelong gamer, and a proud desi who loves keeping his culture alive and visible. I’m also deeply interested in AI development and integration, and what it means for the future of how we live and work.\nI’m currently based in the Dallas area and open to opportunities both locally and internationally."
+  },
+  {
+    "objectID": "index.html#resume",
+    "href": "index.html#resume",
+    "title": "About Me",
+    "section": "Resume",
+    "text": "Resume\n📄 Download Resume"
   }
 ]

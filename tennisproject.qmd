@@ -1,0 +1,58 @@
+---
+title: "Tennis Statistics Database Project"
+---
+
+## Overview
+
+This project aims to build a granular database of detailed statistics for top 100 ATP tennis players, paired with an interactive Shiny interface for querying player and match data. The goal is to provide a more accessible and detailed alternative to existing platforms like TennisViz, which are either paywalled or limited in granularity.
+
+------------------------------------------------------------------------
+
+## Motivation
+
+As an avid tennis player myself, I wanted to build a tool that goes beyond surface level statistics. The database is designed to capture things like average and maximum serve speeds, court coverage, head-to-head comparisons, and granular match breakdowns — data that is meaningful both for fans and for performance analysis.
+
+------------------------------------------------------------------------
+
+## Tech Stack
+
+-   **PostgreSQL** — relational database storing all player, tournament, match, and stats data
+-   **R** — data preparation and loading
+-   **R Shiny** — interactive web interface for querying the database
+-   **shinyapps.io** — live deployment platform
+
+------------------------------------------------------------------------
+
+## Database Schema
+
+The database consists of four core relations:
+
+**Players** — player_id, name, nationality, age, height, weight, handedness
+
+**Tournaments** — tournament_id, name, location, surface (clay/grass/hard), type (250/500/1000/Grand Slam)
+
+**Matches** — match_id, tournament_id, player1_id, player2_id, winner_id, date, round
+
+**Stats** — stat_id, match_id, player_id, aces, double_faults, first_serve_pct, first_serve_won_pct, second_serve_won_pct, break_points_saved_pct, return_points_won_pct
+
+------------------------------------------------------------------------
+
+## Data Source
+
+Data is sourced from [Tennis Abstract](https://www.tennisabstract.com) and Jeff Sackmann's open-source [tennis_atp GitHub repository](https://github.com/JeffSackmann/tennis_atp), which provides clean CSV files of ATP match data going back several decades.
+
+------------------------------------------------------------------------
+
+## Current Status
+
+The database schema has been designed and deployed in PostgreSQL locally. A prototype Shiny application has been built and deployed demonstrating the query interface with sample player data. The next steps are loading real ATP match data from the Sackmann dataset and connecting the live database to the deployed application.
+
+------------------------------------------------------------------------
+
+## Live App
+
+[Click here to view the Tennis Statistics Shiny App](https://prashanttiwari.shinyapps.io/tennis-app/)
+
+------------------------------------------------------------------------
+
+## 

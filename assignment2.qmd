@@ -1,0 +1,41 @@
+---
+title: "Assignment 2"
+---
+
+## Question 1: Relation Schema, Relation, and Instance
+
+**Relation Schema**
+
+A relation schema is the blueprint of a relation. It describes the name of the relation and its associated attributes. For example, in a university database, the Student relation schema could look like:
+
+`student(ID, name, dept_name, tot_cred)`
+
+This defines the structure — the name of the relation and what attributes it contains — but does not contain any actual data.
+
+**Relation**
+
+A relation itself is a logical entity that encompasses the actual contents of the table. For example, the Student relation would contain all students and their associated attributes. It is the full table of data that conforms to the schema.
+
+**Relation Instance**
+
+A relation instance is a snapshot of the actual relation at a specific point in time. As the relation constantly changes through updates and insertions, the instance shows what the relation looked like at a particular moment.
+
+For example, for the UTD Instructors table:
+
+- **Relation**: Instructor
+- **Schema**: `instructor(ID, name, dept_name, salary)`
+- **Instance**: The list of all instructors and their associated attributes at the exact moment the snapshot was taken
+
+---
+
+## Question 4: How AI and LLMs Can Assist in Database Management
+
+Describe two ways artificial intelligence or LLMs can assist in managing or querying a database.
+
+**1. Natural Language Querying**
+
+LLMs can allow users to interact with databases using plain English rather than formal query syntax. Instead of writing SQL, a user can simply ask "show me all students enrolled in more than 15 credit hours this semester" and the LLM translates this into a valid query. This significantly reduces the barrier to data access and allows people without technical knowledge of querying languages to work with data effectively.
+
+**2. Anomaly Detection and Pattern Recognition**
+
+AI can perform anomaly detection at a scale and speed that humans cannot match. This enables early detection of fraud, data entry errors, and unusual patterns across large datasets. Beyond anomaly detection, AI can identify, consolidate, and present relevant trends in data that would be difficult to surface through traditional querying alone — turning raw data into actionable insight.

@@ -2,13 +2,15 @@
 title: "Assignments"
 ---
 
+## Assignments and Projects
+
 ## Assignment 1
 
-[Download Assignment 1](Assignment%201.pptx)
+[View Assignment 1](assignment1.html)
 
 ## Assignment 2
 
-[Download Assignment 2](Assignment%202.pptx)
+[View Assignment 2](assignment2.html)
 
 ## Assignment 3
 
